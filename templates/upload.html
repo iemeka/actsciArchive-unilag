@@ -1,0 +1,38 @@
+<html>
+    <body>
+        <div>
+            <!-- navigation bar -->
+            <a href="{{url_for('index')}}">logo</a>   <a href="{{url_for('search')}}" style="margin-left:300px">search</a>
+        </div>
+        <hr/>
+        <div>
+            <!-- search box -->
+            <form action="#" method="POST" enctype="multipart/form-data">
+               select file: <input type="file" name="file-name"><br/>
+               <p></p>
+               course title: <input type="text" name="course-title"><br/>
+               <p></p>
+               course code: <input type="text" name="course-code"><br/>
+               <p></p>
+               category:
+                <select name ="category">
+                    <option>note</option>
+                    <option>textbook</option>
+                    <option>handouts</option>
+                    <option>pastquestions</option>
+                </select><br/>
+                <p></p>
+                year (for past question):
+                <select name ="year">
+                        <option>2015</option>
+                        <option>2016</option>
+                        <option>2017</option>
+                        <option>2018</option>
+                    </select><br/>
+                    <p></p>
+                <input type="button" value="upload">
+            </form>
+        </div>
+       
+    </body>
+</html>
