@@ -13,7 +13,7 @@ class courseDetails(Base):
     filepath = Column(String(350), nullable=False)
     filename = Column(String(350), nullable=False)
     coursetitle = Column(String(350), nullable=False)
-    coursecode = Column(String(350), nullable=False)
+    coursecode = Column(String(7), nullable=False)
     category = Column(String(350), nullable=False)
     year = Column(Integer)
 

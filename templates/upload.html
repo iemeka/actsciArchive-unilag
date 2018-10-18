@@ -6,6 +6,14 @@
         </div>
         <hr/>
         <div>
+            <!-- flash message -->
+            {% with messages = get_flashed_messages()  %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <strong>{{message}}</strong>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
             <!-- search box -->
             <form action="{{url_for('storefile')}}" method="POST" enctype="multipart/form-data">
                select file: <input type="file" name="file-name"><br/>
@@ -22,8 +30,9 @@
                     <option>pastquestions</option>
                 </select><br/>
                 <p></p>
-                year (for past question):
+                year (for past question ONLY):
                 <select name ="year">
+                        <option>year</option>
                         <option>2015</option>
                         <option>2016</option>
                         <option>2017</option>
