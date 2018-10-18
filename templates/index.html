@@ -7,9 +7,9 @@
         <hr/>
         <div>
             <!-- search box -->
-            <form action="#" method="POST" enctype="multipart/form-data">
-                <input type="search" name='coursecode'>
-                <input type="button" value="search">
+            <form action="{{url_for('getSearchInput')}}" method="POST" enctype="multipart/form-data">
+                <input type="search" name='code'>
+                <input type="submit" value="search">
             </form>
         </div>
         <div>
