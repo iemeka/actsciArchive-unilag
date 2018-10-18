@@ -7,16 +7,22 @@
         <hr/>
         <div>
             <!-- search box -->
-            <form action="#" method="POST" enctype="multipart/form-data">
-                <input type="search" name='coursecode'>
-                <input type="button" value="search">
+            <form action="{{url_for('getSearchInput')}}" method="POST" enctype="multipart/form-data">
+                <input type="search" name='code'>
+                <input type="submit" value="search">
             </form>
         </div>
         <div>
             <h3>search result</h3>
-            <!-- display searched result  here -->
+            {% for course in getMatchingDetails %}
+            <p>
+                <a href="{{url_for('download', name = course.filename)}}">{{course.coursetitle}}</a><br/>
+                {{course.coursecode}}<br/>
+                {{course.category}}<br/>
+             </p>
+            {% endfor %}
 
-
+         
         </div>
     </body>
 </html>

@@ -10,11 +10,12 @@ class courseDetails(Base):
     __tablename__ = 'course_details'
 
     id = Column(Integer, primary_key=True)
+    filepath = Column(String(350), nullable=False)
     filename = Column(String(350), nullable=False)
     coursetitle = Column(String(350), nullable=False)
     coursecode = Column(String(350), nullable=False)
     category = Column(String(350), nullable=False)
     year = Column(Integer)
 
-engine = create_engine('sqlite:///paths.db')
+engine = create_engine('sqlite:///filedetails.db')
 Base.metadata.create_all(engine)
