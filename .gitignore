@@ -1,0 +1,11 @@
+*.pdf
+*.jpg
+*.jpeg
+*.png
+*.doc
+*.ppt
+*.docx
+Thumbs.db
+*.o
+*.pyc
+*.yml
