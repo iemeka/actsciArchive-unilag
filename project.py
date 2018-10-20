@@ -4,14 +4,22 @@ from db_setup import Base, courseDetails
 import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+from flask_sqlalchemy import SQLAlchemy
+# from flask_migrate import Migrate
 
-engine = create_engine('sqlite:///filedetails.db')
+app = Flask(__name__)
+app.secret_key = 'super_secret_key'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://postgres:postgresemeka@localhost/actsci_db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+# db = SQLAlchemy(app)
+engine = create_engine('postgres://postgres:postgresemeka@localhost/actsci_db')
 Base.metadata.bind = engine
+# migrate = Migrate(app, db)
 
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
-app = Flask(__name__)
 ALLOWED_EXTENSIONS = set(['pdf', 'png', 'jpg', 'doc', 'jpeg'])
 linkToCdir = os.path.dirname(os.path.abspath(__file__))
 pathToFiles = os.path.dirname(os.path.join(linkToCdir, 'static/files/'))
@@ -25,8 +33,6 @@ uploadFolder = app.config['UPLOAD_FOLDER']
 @app.route('/index')
 @app.route('/home')
 def index():
-    DBSession = sessionmaker(bind=engine)
-    session = DBSession()
     listRecentDetails = session.query(courseDetails).all()
     return render_template('index.html', listRecentDetails=listRecentDetails)
 
@@ -84,8 +90,11 @@ def storefile():
                     Year = Year
                     )
                 )
+            else:
+                flash("make sure you put in ALL file details before uploading ccode and tiltls")
+                return redirect('upload')
         else:
-            flash("make sure you put in ALL file details before uploading")
+            flash("make sure you put in ALL file details before uploading ccode and tiltls")
             return redirect('upload')
     return render_template('upload.html')
         
@@ -93,8 +102,6 @@ def storefile():
 #store remaining file details to database
 @app.route('/storeDetails/<fileName>/<courseTitle>/<courseCode>/<Category>/<Year>')
 def storeDetails(fileName,courseTitle,courseCode,Category,Year):
-    DBSession = sessionmaker(bind=engine)
-    session = DBSession()
     filePath = os.path.join(uploadFolder, fileName)
     newDetail = courseDetails(
         filepath = filePath,
@@ -133,8 +140,6 @@ def getSearchInput():
 #compare input with database and show result
 @app.route('/compareinput/<searchCode>')
 def compareinput(searchCode):
-    DBSession = sessionmaker(bind=engine)
-    session = DBSession()
     getMatchingDetails = session.query(courseDetails).filter_by(coursecode = searchCode).all()
     if getMatchingDetails:
         return render_template('result.html', getMatchingDetails = getMatchingDetails)
@@ -146,5 +151,4 @@ def compareinput(searchCode):
 
 
 if __name__=='__main__':
-    app.secret_key = 'date_of_birth'
     app.run(debug=True)

@@ -2,7 +2,6 @@ import sys
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import create_engine
-from flask_sqlalchemy import SQLAlchemy
 
 Base = declarative_base()
 
@@ -15,7 +14,7 @@ class courseDetails(Base):
     coursetitle = Column(String(350), nullable=False)
     coursecode = Column(String(7), nullable=False)
     category = Column(String(350), nullable=False)
-    year = Column(Integer)
-
-engine = create_engine('sqlite:///filedetails.db')
+    year = Column(String(8))
+    
+engine = create_engine('postgres://postgres:postgresemeka@localhost/actsci_db')
 Base.metadata.create_all(engine)
