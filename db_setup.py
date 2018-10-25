@@ -2,6 +2,7 @@ import sys
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import create_engine
+import os
 
 Base = declarative_base()
 
@@ -16,5 +17,5 @@ class courseDetails(Base):
     category = Column(String(350), nullable=False)
     year = Column(String(8))
     
-engine = create_engine('postgres://postgres:postgresemeka@localhost/actsci_db')
+engine = create_engine(os.environ['DATABASE_URL'])
 Base.metadata.create_all(engine)

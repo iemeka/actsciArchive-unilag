@@ -5,15 +5,19 @@ import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from flask_sqlalchemy import SQLAlchemy
+#import psycopg2
 # from flask_migrate import Migrate
+
+DATABASE_URL = os.environ['DATABASE_URL']
+#conn = psycopg2.connect(DATABASE_URL, sslmode='required')
 
 app = Flask(__name__)
 app.secret_key = 'super_secret_key'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://postgres:postgresemeka@localhost/actsci_db'
+app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # db = SQLAlchemy(app)
-engine = create_engine('postgres://postgres:postgresemeka@localhost/actsci_db')
+engine = create_engine(DATABASE_URL)
 Base.metadata.bind = engine
 # migrate = Migrate(app, db)
 
