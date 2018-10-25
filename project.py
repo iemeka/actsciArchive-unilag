@@ -30,8 +30,8 @@ uploadFolder = app.config['UPLOAD_FOLDER']
 #creating pages - views
 
 @app.route('/')
-@app.route('/index')
 @app.route('/home')
+@app.route('/index')
 def index():
     listRecentDetails = session.query(courseDetails).all()
     return render_template('index.html', listRecentDetails=listRecentDetails)
