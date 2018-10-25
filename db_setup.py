@@ -15,7 +15,7 @@ class courseDetails(Base):
     coursetitle = Column(String(350), nullable=False)
     coursecode = Column(String(7), nullable=False)
     category = Column(String(350), nullable=False)
-    year = Column(String(8))
+    year = Column(Integer)
     
 engine = create_engine(os.environ['DATABASE_URL'])
 Base.metadata.create_all(engine)
