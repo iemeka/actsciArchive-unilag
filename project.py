@@ -71,14 +71,16 @@ def valid_code(code):
 @app.route('/storefile', methods=['POST', 'GET'])
 def storefile():
     if request.method == 'POST':
-        courseTitle = request.form['course-title']
-        courseCode = valid_code(request.form['course-code'])
-        Category = request.form['category']
-        Year = request.form['year']
-        
-        if (courseTitle and courseCode and Category and Year):
-            file = request.files['file-name']
-            if (valid_ext(file.filename) and 'file-name' in request.files):
+        file = request.files['file-name']
+        if file.filename == " ":
+            flash("baba select one file. just on file 'chikena!'")
+            return redirect('upload')
+        else:
+            courseTitle = request.form['course-title']
+            courseCode = valid_code(request.form['course-code'])
+            Category = request.form['category']
+            Year = request.form['year']
+            if (courseTitle and courseCode and Category and Year and valid_ext(file.filename) and 'file-name' in request.files):    
                 filename = secure_filename(file.filename)
                 file.save(os.path.join(uploadFolder, filename))
                 return redirect(url_for(
@@ -93,10 +95,8 @@ def storefile():
             else:
                 flash("make sure you put in ALL file details before uploading ccode and tiltls")
                 return redirect('upload')
-        else:
-            flash("make sure you put in ALL file details before uploading ccode and tiltls")
-            return redirect('upload')
-    return render_template('upload.html')
+    else:
+        return redirect('upload')
         
 
 #store remaining file details to database
