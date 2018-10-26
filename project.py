@@ -25,7 +25,7 @@ DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
 ALLOWED_EXTENSIONS = set(['pdf', 'png', 'jpg', 'doc', 'jpeg'])
-linkToCdir = os.path.dirname(os.path.abspath(__file__))
+linkToCdir = os.path.dirname(__file__)
 pathToFiles = os.path.dirname(os.path.join(linkToCdir, 'static/files/'))
 UPLOAD_FOLDER = pathToFiles
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
