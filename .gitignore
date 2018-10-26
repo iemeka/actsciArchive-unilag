@@ -3,7 +3,6 @@
 *.jpeg
 *.png
 *.doc
-*.ppt
 *.docx
 Thumbs.db
 *.o
