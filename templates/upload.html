@@ -15,8 +15,8 @@
                 {% endif %}
             {% endwith %}
             <!-- search box -->
-            <form action="{{url_for('storefile')}}" method="POST" enctype="multipart/form-data">
-               select file: <input type="file" name="file-name"><br/>
+            <form action="{{url_for('storeDetails')}}" method="POST" enctype="multipart/form-data">
+               select file: <input type="file" name="file-name" accept=".pdf,.doc,.docx"/><br/>
                <p></p>
                course title: <input type="text" name="course-title"><br/>
                <p></p>

@@ -2,7 +2,7 @@
     <body>
         <div>
             <!-- navigation bar -->
-            <a href="{{url_for('index')}}">logo</a>   <a href="{{url_for('storefile')}}" style="margin-left:300px">upload</a>
+            <a href="{{url_for('index')}}">logo</a>   <a href="{{url_for('storeDetails')}}" style="margin-left:300px">upload</a>
         </div>
         <hr/>
         <div>
@@ -22,6 +22,8 @@
                 {{detail.category}}<br/>
             </p>
             {% endfor %}
+
+            {{newName}}
 
 
         </div>

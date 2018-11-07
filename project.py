@@ -24,14 +24,14 @@ Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
-ALLOWED_EXTENSIONS = set(['pdf', 'png', 'jpg', 'doc', 'jpeg'])
+ALLOWED_EXTENSIONS = set(['pdf','doc','docx'])
 linkToCdir = os.path.dirname(__file__)
 pathToFiles = os.path.dirname(os.path.join(linkToCdir, 'static/files/'))
 UPLOAD_FOLDER = pathToFiles
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 uploadFolder = app.config['UPLOAD_FOLDER']
 
-#creating pages - views
+#----- creating pages - views
 
 @app.route('/')
 @app.route('/home')
@@ -54,13 +54,13 @@ def result():
     return render_template('result.html')
 
 
-# Back end functionalities
-
+#----- Backend functionalities
 
 
 #check for valid extention
 def valid_ext(filename):
     return '.' in filename and filename.rsplit('.',1)[1].lower() in ALLOWED_EXTENSIONS
+
 #check for valid code name
 def valid_code(code):
     if " " in code:
@@ -68,16 +68,15 @@ def valid_code(code):
             jointcode = splitedcode[0]+splitedcode[1]
             return jointcode.upper()
     else:
-            return code.upper()
+            return code.upper()      
 
-
-#store file to folder on click - uploads
-@app.route('/storefile', methods=['POST', 'GET'])
-def storefile():
+#store store files to folder, details to database and rename both filename on both filesystem and database
+@app.route('/storeDetails', methods=['POST', 'GET'])
+def storeDetails():
     if request.method == 'POST':
         file = request.files['file-name']
         if file.filename == " ":
-            flash("baba select one file. just on file 'chikena!'")
+            flash("you didnt select any file")
             return redirect('upload')
         else:
             courseTitle = request.form['course-title']
@@ -85,47 +84,48 @@ def storefile():
             Category = request.form['category']
             Year = request.form['year']
             if (courseTitle and courseCode and Category and Year and valid_ext(file.filename) and 'file-name' in request.files):    
-                filename = secure_filename(file.filename)
-                file.save(os.path.join(uploadFolder, filename))
-                return redirect(url_for(
-                    'storeDetails', 
-                    fileName = filename,  
-                    courseTitle=courseTitle, 
-                    courseCode=courseCode,
-                    Category = Category,
-                    Year = Year
-                    )
+                fileName = secure_filename(file.filename)
+                filePath = os.path.join(uploadFolder, fileName)
+                newDetail = courseDetails(
+                    filepath = filePath,
+                    filename = fileName,
+                    coursetitle = courseTitle,
+                    coursecode = courseCode,
+                    category = Category,
+                    year = Year,
                 )
+                session.rollback()
+                session.add(newDetail)
+                session.commit()
+
+                filename = secure_filename(file.filename)
+                fileExt = "."+filename.rsplit('.',1)[1].lower()
+                #rename file in database
+                getFile = session.query(courseDetails).filter_by(filename=fileName).one()
+                getFile.filename = (str(getFile.id)+fileExt)
+                newName = getFile.filename
+                #rename path
+                filePath = os.path.join(uploadFolder, newName)
+                getFile.filepath = filePath
+                #rename file to be stored in folder
+                filename = newName
+                file.save(os.path.join(uploadFolder, filename))
+                session.add(getFile)
+                session.commit()
+                return redirect(url_for('index'))
             else:
-                flash("make sure you put in ALL file details before uploading ccode and tiltls")
+                flash("make sure you put in ALL file details before uploading files must be in DOC or PDF format")
                 return redirect('upload')
     else:
         return redirect('upload')
-        
 
-#store remaining file details to database
-@app.route('/storeDetails/<fileName>/<courseTitle>/<courseCode>/<Category>/<Year>')
-def storeDetails(fileName,courseTitle,courseCode,Category,Year):
-    filePath = os.path.join(uploadFolder, fileName)
-    newDetail = courseDetails(
-        filepath = filePath,
-        filename = fileName,
-        coursetitle = courseTitle,
-        coursecode = courseCode,
-        category = Category,
-        year = Year,
-    )
-    session.rollback()
-    session.add(newDetail)
-    session.commit()
-    return redirect(url_for('index',))
 
-# download engines
+# download files
 @app.route('/download/<name>')
 def download(name):
     return send_from_directory(uploadFolder, name, as_attachment = True)
 
-# search engine
+# search for files
 @app.route('/getSearchInput', methods=['GET', 'POST'])
 def getSearchInput():
     if request.method == 'POST':
@@ -150,9 +150,10 @@ def compareinput(searchCode):
     else:
         flash("no file found for that course code. pls check and enter correct code ")
         return redirect(url_for('result'))
-        
-
 
 
 if __name__=='__main__':
     app.run(debug=True)
+
+
+    # # ALTER SEQUENCE course_details_id_seq RESTART WITH 1
