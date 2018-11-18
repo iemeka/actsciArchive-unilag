@@ -1,0 +1,72 @@
+.upload-form {
+    width: 100%;
+    margin: auto 10%;
+}
+
+.upload-form h2{
+    display: block;
+    text-transform: capitalize;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #3c6faeff;
+    text-align: center;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+    font-weight: normal;
+    margin-bottom: 7%
+}
+
+.upload-form label {
+    display: block;
+    font-size: 20px;
+    font-weight: normal;
+    font-family: Suruma;
+    margin-left: 5%;
+    text-transform: capitalize;
+    color: #3333338d
+    
+}
+
+form.upload-form input::-webkit-input-placeholder{
+    color: #dddddd;
+
+}
+
+select,
+form.upload-form input[type=file],
+form.upload-form input[type=text] {
+    padding: 7px;
+    font-size: 17px;
+    float: left;
+    width: 90%;
+    margin: 0 5% 0 5%;
+    border: none;
+    border-bottom: 1px solid #b3b3b38b;
+    margin-bottom: 5%;
+    align-self: auto;
+}
+
+.cat, option{
+    color: rgb(107, 103, 103);
+    background-color: white
+
+}
+
+.upload-btn-2 {
+    background-color: #6bbb47ff;
+    display: block;
+    margin: 10% auto;
+    text-decoration: none;
+    padding: 12px 35px;
+    border-radius: 3px;
+}
+
+.clear{
+    clear: both;
+}
+
+@media only screen and (min-width:961px){
+    .upload-form label{
+        font-size: 25px;
+    }
+}

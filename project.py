@@ -31,7 +31,7 @@ UPLOAD_FOLDER = pathToFiles
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 uploadFolder = app.config['UPLOAD_FOLDER']
 
-#----- creating pages - views
+#----- creating pages
 
 @app.route('/')
 @app.route('/home')
@@ -48,14 +48,11 @@ def upload():
 def search():
     return render_template('search.html')
 
-# result route eliminated!
 @app.route('/result')
 def result():
     return render_template('result.html')
 
-
 #----- Backend functionalities
-
 
 #check for valid extention
 def valid_ext(filename):
@@ -118,7 +115,6 @@ def storeDetails():
                 return redirect('upload')
     else:
         return redirect('upload')
-
 
 # download files
 @app.route('/download/<name>')

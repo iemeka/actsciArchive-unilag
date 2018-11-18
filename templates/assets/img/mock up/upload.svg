@@ -27,14 +27,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.01"
-     inkscape:cx="299.52602"
-     inkscape:cy="727.26353"
+     inkscape:cx="686.65473"
+     inkscape:cy="648.05561"
      inkscape:document-units="mm"
-     inkscape:current-layer="g11623"
+     inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1859"
+     inkscape:window-width="1867"
      inkscape:window-height="1056"
-     inkscape:window-x="61"
+     inkscape:window-x="53"
      inkscape:window-y="24"
      inkscape:window-maximized="1">
     <inkscape:grid
@@ -49,7 +49,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -58,15 +58,15 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.085;stroke-miterlimit:4;stroke-dasharray:0.02125,0.02125;stroke-dashoffset:0.85;stroke-opacity:1"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.085;stroke-miterlimit:4;stroke-dasharray:0.02125, 0.02125;stroke-dashoffset:0.85000002;stroke-opacity:1"
        id="rect12034"
        width="210.35684"
        height="254.89066"
-       x="-0.2619637"
-       y="-0.066831678" />
+       x="-0.78589112"
+       y="0.98102313" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:AnjaliOldLipi;-inkscape-font-specification:'AnjaliOldLipi, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#333333;fill-opacity:0.55351682;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46666667px;line-height:1.25;font-family:Chandas;-inkscape-font-specification:'Chandas, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#08090f;fill-opacity:0.48743719;stroke:none;stroke-width:0.26458332;"
        x="70.042908"
        y="52.936291"
        id="text11578"><tspan
@@ -74,47 +74,21 @@
          id="tspan11576"
          x="70.042908"
          y="52.936291"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;font-family:AnjaliOldLipi;-inkscape-font-specification:'AnjaliOldLipi, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#333333;fill-opacity:0.55351682;stroke-width:0.26458332">Upload Course</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46666667px;font-family:Chandas;-inkscape-font-specification:'Chandas, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:justify;writing-mode:lr;text-anchor:start;fill:#08090f;fill-opacity:0.48743719;stroke-width:0.26458332">Upload Course</tspan></text>
     <g
-       transform="translate(-0.42532167,1.6582429)"
+       transform="translate(-0.68728523,3.7539519)"
        id="g11623">
-      <text
-         transform="scale(1.1744735,0.85144533)"
-         id="text11597"
-         y="8.6038542"
-         x="4.2883763"
-         style="font-style:normal;font-weight:normal;font-size:7.13185978px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.17829649"
-         xml:space="preserve"><tspan
-           style="stroke-width:0.17829649"
-           y="8.6038542"
-           x="4.2883763"
-           id="tspan11595"
-           sodipodi:role="line"><tspan
-   id="tspan11599"
-   style="fill:#008000;stroke-width:0.17829649">tPx</tspan> = <tspan
-   id="tspan11603"
-   style="fill:#000080;stroke-width:0.17829649">1</tspan> - <tspan
-   id="tspan11601"
-   style="fill:#fa0000;fill-opacity:1;stroke-width:0.17829649">tQx</tspan></tspan></text>
-      <text
-         transform="scale(1.0885577,0.91864676)"
-         id="text11607"
-         y="10.459562"
-         x="138.93045"
-         style="font-style:normal;font-weight:normal;font-size:6.3499999px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.22171606"
-         xml:space="preserve"><tspan
-           style="font-size:6.3499999px;fill:#000000;stroke-width:0.22171606"
-           y="10.459562"
-           x="138.93045"
-           id="tspan11605"
-           sodipodi:role="line">search uploads</tspan></text>
-      <rect
-         y="2.2908425"
-         x="146.17574"
-         height="12.05033"
-         width="59.465755"
-         id="rect11609"
-         style="fill:#f9f9f9;fill-opacity:0.54434252;stroke:#000000;stroke-width:0.085;stroke-miterlimit:4;stroke-dasharray:0, 0.935;stroke-dashoffset:0;stroke-opacity:1" />
+      <g
+         transform="translate(-3.1515065,-3.1544579)"
+         id="g11623-3">
+        <rect
+           style="fill:#da3630;fill-opacity:1;stroke:#000000;stroke-width:0.085;stroke-miterlimit:4;stroke-dasharray:0, 0.935;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect11609-6"
+           width="60.775578"
+           height="14.669967"
+           x="147.3949"
+           y="5.8827667" />
+      </g>
     </g>
     <image
        y="5.3767853"
@@ -125,26 +99,26 @@
        height="31.461842"
        width="35.391296" />
     <rect
-       style="fill:#f9f9f9;fill-opacity:1;stroke:#000000;stroke-width:0.076;stroke-miterlimit:4;stroke-dasharray:0.076,3.64799983;stroke-dashoffset:0.75999996;stroke-opacity:1"
+       style="fill:#d6e9fe;fill-opacity:1;stroke:#000000;stroke-width:0.076;stroke-miterlimit:4;stroke-dasharray:0.076, 3.64799983;stroke-dashoffset:0.75999993;stroke-opacity:1"
        id="rect12627"
        width="185.99422"
        height="105.62376"
-       x="12.836221"
-       y="64.376236" />
+       x="12.312293"
+       y="65.162132" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:7.76111126px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="29.863861"
+       style="font-style:normal;font-weight:normal;font-size:7.76111126px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#2c181d;fill-opacity:0.51256281;stroke:none;stroke-width:0.26458332;"
+       x="29.077971"
        y="87.952972"
        id="text12631"><tspan
          sodipodi:role="line"
          id="tspan12629"
-         x="29.863861"
+         x="29.077971"
          y="87.952972"
-         style="font-size:7.76111126px;stroke-width:0.26458332">select file</tspan></text>
+         style="font-size:7.76111126px;stroke-width:0.26458332;fill:#2c181d;fill-opacity:0.51256281;">select file</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#2c181d;fill-opacity:0.51372552;stroke:none;stroke-width:0.26458332;"
        x="22.528879"
        y="104.45668"
        id="text12635"><tspan
@@ -152,10 +126,10 @@
          id="tspan12633"
          x="22.528879"
          y="104.45668"
-         style="font-size:7.76111126px;stroke-width:0.26458332">course title</tspan></text>
+         style="font-size:7.76111126px;stroke-width:0.26458332;fill:#2c181d;fill-opacity:0.51372552;">course title</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#2c181d;fill-opacity:0.51372552;stroke:none;stroke-width:0.26458332;"
        x="19.647278"
        y="118.60271"
        id="text12639"><tspan
@@ -163,10 +137,10 @@
          id="tspan12637"
          x="19.647278"
          y="118.60271"
-         style="font-size:7.76111126px;stroke-width:0.26458332">course code</tspan></text>
+         style="font-size:7.76111126px;stroke-width:0.26458332;fill:#2c181d;fill-opacity:0.51372552;">course code</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#2c181d;fill-opacity:0.51372552;stroke:none;stroke-width:0.26458332;"
        x="31.435642"
        y="133.53465"
        id="text12643"><tspan
@@ -174,10 +148,10 @@
          id="tspan12641"
          x="31.435642"
          y="133.53465"
-         style="font-size:7.76111126px;stroke-width:0.26458332">category</tspan></text>
+         style="font-size:7.76111126px;stroke-width:0.26458332;fill:#2c181d;fill-opacity:0.51372552;">category</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#2c181d;fill-opacity:0.51372552;stroke:none;stroke-width:0.26458332;"
        x="20.433168"
        y="148.20462"
        id="text12647"><tspan
@@ -185,7 +159,7 @@
          id="tspan12645"
          x="20.433168"
          y="148.20462"
-         style="font-size:7.76111126px;stroke-width:0.26458332">year (for past questions)</tspan></text>
+         style="font-size:7.76111126px;stroke-width:0.26458332;fill:#2c181d;fill-opacity:0.51372552;">year (for past questions)</tspan></text>
     <g
        id="g12679"
        transform="translate(3.6674917,1.8337459)">
@@ -277,7 +251,7 @@
          style="fill:#999999;fill-opacity:1;stroke:#000000;stroke-width:0.05714083;stroke-miterlimit:4;stroke-dasharray:0, 0.62854901;stroke-dashoffset:3.21259856;stroke-opacity:1" />
     </g>
     <rect
-       style="fill:#e6e6e6;fill-opacity:1;stroke:#000000;stroke-width:0.085;stroke-miterlimit:4;stroke-dasharray:0, 0.93500002999999998;stroke-dashoffset:3.21259856;stroke-opacity:1"
+       style="fill:#6bbb47;fill-opacity:1;stroke:#000000;stroke-width:0.085;stroke-miterlimit:4;stroke-dasharray:0, 0.93500002999999998;stroke-dashoffset:3.21259856;stroke-opacity:1"
        id="rect12734"
        width="29.104166"
        height="13.229166"
@@ -285,7 +259,7 @@
        y="180.58333" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:6.3499999px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:6.3499999px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#2c181d;fill-opacity:0.51372552;stroke:none;stroke-width:0.26458332;"
        x="142.73625"
        y="148.00125"
        id="text12738"><tspan
@@ -293,7 +267,7 @@
          id="tspan12736"
          x="142.73625"
          y="148.00125"
-         style="stroke-width:0.26458332">2016</tspan></text>
+         style="stroke-width:0.26458332;fill:#2c181d;fill-opacity:0.51372552;">2016</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:6.3499999px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
@@ -304,6 +278,40 @@
          id="tspan12740"
          x="93.259071"
          y="188.54703"
-         style="stroke-width:0.26458332">upload</tspan></text>
+         style="stroke-width:0.26458332;fill:#ffffff;fill-opacity:1">upload</tspan></text>
+    <text
+       transform="scale(1.0655946,0.9384432)"
+       id="text11607"
+       y="16.994827"
+       x="148.53235"
+       style="font-style:normal;font-weight:normal;font-size:8.74087524px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.30519566"
+       xml:space="preserve"><tspan
+         style="font-size:8.74087524px;fill:#ffffff;fill-opacity:1;stroke-width:0.30519566"
+         y="16.994827"
+         x="148.53235"
+         id="tspan11605"
+         sodipodi:role="line">search </tspan></text>
+    <g
+       id="g4666"
+       transform="translate(0.35136809,3.3598804)">
+      <text
+         transform="scale(0.83896299,1.1919477)"
+         id="text4651"
+         y="6.1135974"
+         x="4.2703123"
+         style="font-style:normal;font-weight:normal;font-size:4.24121046px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#3c6fae;fill-opacity:1;stroke:none;stroke-width:0.1767171"
+         xml:space="preserve"><tspan
+           dx="0"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';letter-spacing:0px;fill:#3c0f0f;fill-opacity:0.43718597;stroke-width:0.1767171"
+           y="6.1135974"
+           x="4.2703123"
+           id="tspan4649"
+           sodipodi:role="line">UNIVERSITY OF LAGOS</tspan><tspan
+           id="tspan4653"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:6.27522182px;line-height:0.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';letter-spacing:0px;fill:#3c0f08;fill-opacity:0.72361809;stroke-width:0.1767171"
+           y="11.415111"
+           x="4.2703123"
+           sodipodi:role="line">ACTUARIAL SCIENCE</tspan></text>
+    </g>
   </g>
 </svg>

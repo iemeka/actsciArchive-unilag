@@ -27,14 +27,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.04"
-     inkscape:cx="356.25"
-     inkscape:cy="761.39857"
+     inkscape:cx="581.25"
+     inkscape:cy="828.70627"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g12891"
      showgrid="false"
-     inkscape:window-width="1859"
+     inkscape:window-width="1867"
      inkscape:window-height="1056"
-     inkscape:window-x="61"
+     inkscape:window-x="53"
      inkscape:window-y="24"
      inkscape:window-maximized="1" />
   <metadata
@@ -54,11 +54,11 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.076;stroke-miterlimit:4;stroke-dasharray:0.304,0.152;stroke-dashoffset:0.76;stroke-opacity:1"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.076;stroke-miterlimit:4;stroke-dasharray:0.304, 0.152;stroke-dashoffset:0.75999999;stroke-opacity:1"
        id="rect13314"
        width="210.64903"
        height="297.40186"
-       x="-0.25440705"
+       x="-0.74810714"
        y="-0.40184295" />
     <g
        id="g12891"
@@ -115,43 +115,13 @@
            sodipodi:role="line">Course Repository</tspan></text>
       <g
          id="g11623">
-        <text
-           xml:space="preserve"
-           style="font-style:normal;font-weight:normal;font-size:7.26077509px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.18151937"
-           x="6.6206112"
-           y="9.4142399"
-           id="text11597"
-           transform="scale(1.0410344,0.96058306)"><tspan
-             sodipodi:role="line"
-             id="tspan11595"
-             x="6.6206112"
-             y="9.4142399"
-             style="stroke-width:0.18151937"><tspan
-   style="fill:#008000;stroke-width:0.18151937"
-   id="tspan11599">tPx</tspan> = <tspan
-   style="fill:#000080;stroke-width:0.18151937"
-   id="tspan11603">1</tspan> - <tspan
-   style="fill:#fa0000;fill-opacity:1;stroke-width:0.18151937"
-   id="tspan11601">tQx</tspan></tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-style:normal;font-weight:normal;font-size:6.3499999px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.22171606"
-           x="138.6898"
-           y="13.311189"
-           id="text11607"
-           transform="scale(1.0885577,0.91864676)"><tspan
-             sodipodi:role="line"
-             id="tspan11605"
-             x="138.6898"
-             y="13.311189"
-             style="font-size:6.3499999px;fill:#000000;stroke-width:0.22171606">Upload course</tspan></text>
         <rect
-           style="fill:#f9f9f9;fill-opacity:0.54434252;stroke:#000000;stroke-width:0.085;stroke-miterlimit:4;stroke-dasharray:0, 0.935;stroke-dashoffset:0;stroke-opacity:1"
+           style="fill:#da3630;fill-opacity:1;stroke:#000000;stroke-width:0.085;stroke-miterlimit:4;stroke-dasharray:0, 0.93500000000000005;stroke-dashoffset:0;stroke-opacity:1"
            id="rect11609"
            width="60.775578"
            height="14.669967"
-           x="144.342"
-           y="3.3386962" />
+           x="147.3949"
+           y="5.8827667" />
       </g>
       <text
          id="text11613"
@@ -198,9 +168,9 @@
          id="text11637"
          y="113.8811"
          x="18.134363"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05555582px;line-height:1.25;font-family:AnjaliOldLipi;-inkscape-font-specification:'AnjaliOldLipi, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.20084609"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05555582px;line-height:1.25;font-family:AnjaliOldLipi;-inkscape-font-specification:'AnjaliOldLipi, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#da3630;fill-opacity:1;stroke:none;stroke-width:0.20084609;"
          xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05555582px;font-family:AnjaliOldLipi;-inkscape-font-specification:'AnjaliOldLipi, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#333333;stroke-width:0.20084609"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05555582px;font-family:AnjaliOldLipi;-inkscape-font-specification:'AnjaliOldLipi, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#da3630;stroke-width:0.20084609;fill-opacity:1;"
            y="113.8811"
            x="18.134363"
            id="tspan11635"
@@ -730,5 +700,49 @@
          x="88.399643"
          y="3.4565792" />
     </g>
-  </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:6.3499999px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.22171606;"
+       x="140.80014"
+       y="15.153776"
+       id="text11607"
+       transform="scale(1.0885577,0.91864675)"><tspan
+         sodipodi:role="line"
+         id="tspan11605"
+         x="140.80014"
+         y="15.153776"
+         style="font-size:6.3499999px;fill:#ffffff;fill-opacity:1;stroke-width:0.22171606;">Upload course</tspan></text>
+    <g
+       id="g4666"
+       transform="translate(2.0352564,1.5264423)">
+      <text
+         transform="scale(0.83896299,1.1919477)"
+         id="text4651"
+         y="6.1135974"
+         x="4.2703123"
+         style="font-style:normal;font-weight:normal;font-size:4.24121046px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#3c6fae;fill-opacity:1;stroke:none;stroke-width:0.1767171"
+         xml:space="preserve"><tspan
+           dx="0"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';letter-spacing:0px;fill:#3c0f0f;fill-opacity:0.43718597;stroke-width:0.1767171"
+           y="6.1135974"
+           x="4.2703123"
+           id="tspan4649"
+           sodipodi:role="line">UNIVERSITY OF LAGOS</tspan><tspan
+           id="tspan4653"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:6.27522182px;line-height:0.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';letter-spacing:0px;fill:#3c0f08;fill-opacity:0.72361809;stroke-width:0.1767171"
+           y="11.415111"
+           x="4.2703123"
+           sodipodi:role="line">ACTUARIAL SCIENCE</tspan></text>
+    </g>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4655"
+       style="fill:black;fill-opacity:1;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:24px;line-height:0;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion4657"><rect
+           id="rect4659"
+           width="54.807693"
+           height="25.961538"
+           x="247.11539"
+           y="15.788916" /></flowRegion><flowPara
+         id="flowPara4661" /></flowRoot>  </g>
 </svg>
