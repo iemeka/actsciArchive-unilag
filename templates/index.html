@@ -2,7 +2,6 @@
     <head>
         <title></title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='assets/css/upload.css')}}" />        
         <link rel="stylesheet" type="text/css" href= "{{url_for('static', filename='assets/css/style.css')}}" />
     </head>
     <body>
@@ -22,26 +21,20 @@
                 </div>
             </div>
             <div class="section search">
-                <form class="form" action="{{url_for('getSearchInput')}}" method="POST" enctype="multipart/form-data">
-                    <h2 class="h2">showing results for acs221</h2>
-                    <input class="search-area" name='code' type="text" placeholder="search by course code" />
-                    <button type="submit"><img src="{{url_for('static',filename='assets/img/icon48.png')}}"></button>
+                <form class="form"  action="{{url_for('getSearchInput')}}" method="POST" enctype="multipart/form-data">
+                    <h2 class="h2">course repository</h2>
+                    <input class="search-area" type="text" name='code' placeholder="search by course code" />
+                    <button type="submit" value="submit"><img src="{{url_for('static', filename='assets/img/icon48.png')}}"></button>
                 </form>
             </div>
             <div class="section result">
                 <div class="hold-result">
-                    <h1>search results</h1>
-                    {% with messages = get_flashed_messages()  %}
-                        {% if messages %}
-                            {% for message in messages %}
-                        <strong>{{message}}</strong>
-                            {% endfor %}
-                        {% endif %}
-                     {% endwith %}
-                     {% for course in getMatchingDetails %}
-                    <p>
-                        <h3><a href="{{url_for('download', name = course.filename)}}">{{course.coursetitle}}</a></h3>
-                        <span class="code">{{course.coursecode}}</span> &#8226 <span class="category">{{course.category}}</span>
+                    <h1>Recent Uploads</h1>
+
+                    {% for detail in newlistRecentDetails %}
+                    <p> 
+                    <a  href="{{url_for('download', name = detail.filename)}}"><h3>{{detail.coursetitle}}</h3></a>
+                    <span class="code">{{detail.coursecode}}</span> &#8226 <span class="category">{{detail.category}}</span>
                     </p>
                     {% endfor %}
                 </div>

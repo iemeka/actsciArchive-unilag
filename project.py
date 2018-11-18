@@ -31,14 +31,23 @@ UPLOAD_FOLDER = pathToFiles
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 uploadFolder = app.config['UPLOAD_FOLDER']
 
-#----- creating pages
+#----- creating pages - views
 
 @app.route('/')
 @app.route('/home')
 @app.route('/index')
 def index():
     listRecentDetails = session.query(courseDetails).all()
-    return render_template('index.html', listRecentDetails=listRecentDetails)
+    revlistRecentDetails = reversed(listRecentDetails)
+    counter=0
+    newlistRecentDetails=[]
+    for course in revlistRecentDetails:
+        if counter != 10:
+            newlistRecentDetails.append(course)
+            counter += 1
+        else:
+            break
+    return render_template('index.html', newlistRecentDetails=newlistRecentDetails)
 
 @app.route('/upload')
 def upload():
@@ -48,11 +57,14 @@ def upload():
 def search():
     return render_template('search.html')
 
+# result route eliminated!
 @app.route('/result')
 def result():
     return render_template('result.html')
 
+
 #----- Backend functionalities
+
 
 #check for valid extention
 def valid_ext(filename):
@@ -115,6 +127,7 @@ def storeDetails():
                 return redirect('upload')
     else:
         return redirect('upload')
+
 
 # download files
 @app.route('/download/<name>')

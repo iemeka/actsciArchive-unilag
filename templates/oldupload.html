@@ -1,0 +1,47 @@
+<html>
+    <body>
+        <div>
+            <!-- navigation bar -->
+            <a href="{{url_for('index')}}">logo</a>   <a href="{{url_for('search')}}" style="margin-left:300px">search</a>
+        </div>
+        <hr/>
+        <div>
+            <!-- flash message -->
+            {% with messages = get_flashed_messages()  %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <strong>{{message}}</strong>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <!-- search box -->
+            <form action="{{url_for('storeDetails')}}" method="POST" enctype="multipart/form-data">
+               select file: <input type="file" name="file-name" accept=".pdf,.doc,.docx"/><br/>
+               <p></p>
+               course title: <input type="text" name="course-title"><br/>
+               <p></p>
+               course code: <input type="text" name="course-code"><br/>
+               <p></p>
+               category:
+                <select name ="category">
+                    <option>note</option>
+                    <option>textbook</option>
+                    <option>handouts</option>
+                    <option>pastquestions</option>
+                </select><br/>
+                <p></p>
+                year (for past question ONLY):
+                <select name ="year">
+                        <option>year</option>
+                        <option>2015</option>
+                        <option>2016</option>
+                        <option>2017</option>
+                        <option>2018</option>
+                    </select><br/>
+                    <p></p>
+                <input type="submit" value="upload">
+            </form>
+        </div>
+       
+    </body>
+</html>
