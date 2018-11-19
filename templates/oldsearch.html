@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <div>
+            <!-- navigation bar -->
+            <a href="{{url_for('index')}}">logo</a>   <a href="{{url_for('upload')}}" style="margin-left:300px">upload</a>
+        </div>
+        <hr/>
+        <div style="margin:10% 30%;display:block">
+            <!-- search box -->
+            <form action="{{url_for('getSearchInput')}}" method="POST" enctype="multipart/form-data">
+                <input type="search" name='code'>
+                <input type="submit" value="search">
+            </form>
+        </div>
+       
+    </body>
+</html>
