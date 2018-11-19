@@ -1,5 +1,7 @@
-from flask import Flask, render_template, url_for, request, redirect,flash, send_from_directory
+from flask import make_response, Flask, render_template, url_for, request, redirect,flash, send_from_directory
 from werkzeug.utils import secure_filename
+from functools import wraps, update_wrapper
+from datetime import datetime
 from db_setup import Base, courseDetails
 import os
 from sqlalchemy import create_engine
@@ -31,11 +33,30 @@ UPLOAD_FOLDER = pathToFiles
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 uploadFolder = app.config['UPLOAD_FOLDER']
 
+
+
+
+def nocache(view):
+    @wraps(view)
+    def no_cache(*args, **kwargs):
+        response = make_response(view(*args, **kwargs))
+        response.headers['Last-Modified'] = datetime.now()
+        response.headers['Cache-Control'] = 'no-store, no-cache, must-revalidate, post-check=0, pre-check=0, max-age=0'
+        response.headers['Pragma'] = 'no-cache'
+        response.headers['Expires'] = '-1'
+        return response
+    return update_wrapper(no_cache, view)
+
+
+
+
+
 #----- creating pages - views
 
 @app.route('/')
 @app.route('/home')
 @app.route('/index')
+@nocache
 def index():
     listRecentDetails = session.query(courseDetails).all()
     revlistRecentDetails = reversed(listRecentDetails)
@@ -50,15 +71,18 @@ def index():
     return render_template('index.html', newlistRecentDetails=newlistRecentDetails)
 
 @app.route('/upload')
+@nocache
 def upload():
     return render_template('upload.html')
 
 @app.route('/search')
+@nocache
 def search():
     return render_template('search.html')
 
 # result route eliminated!
 @app.route('/result')
+@nocache
 def result():
     return render_template('result.html')
 
@@ -81,6 +105,7 @@ def valid_code(code):
 
 #store store files to folder, details to database and rename both filename on both filesystem and database
 @app.route('/storeDetails', methods=['POST', 'GET'])
+@nocache
 def storeDetails():
     if request.method == 'POST':
         file = request.files['file-name']
@@ -131,11 +156,13 @@ def storeDetails():
 
 # download files
 @app.route('/download/<name>')
+@nocache
 def download(name):
     return send_from_directory(uploadFolder, name, as_attachment = True)
 
 # search for files
 @app.route('/getSearchInput', methods=['GET', 'POST'])
+@nocache
 def getSearchInput():
     if request.method == 'POST':
         searchCode = valid_code(request.form['code'])
@@ -152,6 +179,7 @@ def getSearchInput():
 
 #compare input with database and show result
 @app.route('/compareinput/<searchCode>')
+@nocache
 def compareinput(searchCode):
     getMatchingDetails = session.query(courseDetails).filter_by(coursecode = searchCode).all()
     if getMatchingDetails:
