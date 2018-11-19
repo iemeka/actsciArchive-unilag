@@ -1,11 +1,8 @@
 *.pdf
-*.jpg
-*.jpeg
-*.png
 *.doc
 *.docx
 Thumbs.db
 *.o
 *.pyc
 *.yml
-*.svg
+
