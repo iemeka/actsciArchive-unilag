@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, request, redirect,flash, send_from_directory
+from flask import Flask, render_template, url_for, request, redirect,flash, send_from_directory, Markup
 from werkzeug.utils import secure_filename
 from db_setup import Base, courseDetails
 import os
@@ -123,7 +123,8 @@ def storeDetails():
                 session.commit()
                 return redirect(url_for('index'))
             else:
-                flash("make sure you put in ALL file details before uploading files must be in DOC or PDF format")
+                msg = Markup("Make sure you put in ALL file details before uploading.<br/>Files must be in DOC or PDF format")
+                flash(msg)
                 return redirect('upload')
     else:
         return redirect('upload')
@@ -158,7 +159,7 @@ def compareinput(searchCode):
     if getMatchingDetails:
         return render_template('result.html', getMatchingDetails = getMatchingDetails, displayCode=displayCode)
     else:
-        flash("No file found. Pls check and enter correct code ")
+        flash("No file found. Pls enter correct code")
         return redirect(url_for('result'))
 
 
