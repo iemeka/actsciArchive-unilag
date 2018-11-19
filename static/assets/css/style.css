@@ -118,6 +118,11 @@ button:focus {
     margin-left: 10%
 }
 
+.hold-result a{
+    color: black;
+    text-decoration: none
+}
+
 .hold-result p{
     margin-bottom: 3%;
 }
