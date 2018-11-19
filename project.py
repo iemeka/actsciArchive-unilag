@@ -140,7 +140,7 @@ def getSearchInput():
     if request.method == 'POST':
         searchCode = valid_code(request.form['code'])
         if searchCode == "":
-            flash("You did not type in any course code. Pls enter a valid course code")
+            flash("Pls enter a valid course code")
             return render_template('result.html')
         if searchCode and 'code' in request.form:
             return redirect(url_for('compareinput', searchCode = searchCode))
@@ -154,10 +154,11 @@ def getSearchInput():
 @app.route('/compareinput/<searchCode>')
 def compareinput(searchCode):
     getMatchingDetails = session.query(courseDetails).filter_by(coursecode = searchCode).all()
+    displayCode = searchCode
     if getMatchingDetails:
-        return render_template('result.html', getMatchingDetails = getMatchingDetails)
+        return render_template('result.html', getMatchingDetails = getMatchingDetails, displayCode=displayCode)
     else:
-        flash("no file found for that course code. pls check and enter correct code ")
+        flash("No file found. Pls check and enter correct code ")
         return redirect(url_for('result'))
 
 

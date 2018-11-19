@@ -23,7 +23,7 @@
             </div>
             <div class="section search">
                 <form class="form" action="{{url_for('getSearchInput')}}" method="POST" enctype="multipart/form-data">
-                    <h2 class="h2">showing results for acs221</h2>
+                    <h2 class="h2-3">showing results for {{displayCode}}</h2>
                     <input class="search-area" name='code' type="text" placeholder="search by course code" />
                     <button type="submit"><img src="{{url_for('static',filename='assets/img/icon48.png')}}"></button>
                 </form>
@@ -34,7 +34,7 @@
                     {% with messages = get_flashed_messages()  %}
                         {% if messages %}
                             {% for message in messages %}
-                        <strong>{{message}}</strong>
+                        <strong class="flash-message">{{message}}</strong>
                             {% endfor %}
                         {% endif %}
                      {% endwith %}
