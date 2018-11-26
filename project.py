@@ -132,10 +132,10 @@ def get_client():
     return client(
         's3',
         'us-east-1',
-        aws_access_key_id = "AKIAI2UXGL2X2OF42AAA",
-        aws_secret_access_key= "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"
+        aws_access_key_id = os.environ['S3_KEY_ID'],
+        aws_secret_access_key= os.environ['S3_SECRET_KEY']
     )
-
+    
 # download files
 @app.route('/download/<name>')
 def download(name):
