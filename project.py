@@ -1,26 +1,23 @@
-from flask import Flask, render_template, url_for, request, redirect,flash, send_from_directory, Markup
+from flask import Flask, render_template, url_for, request, redirect,flash, send_from_directory, Markup, Response
 from werkzeug.utils import secure_filename
 from db_setup import Base, courseDetails
 import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from flask_sqlalchemy import SQLAlchemy
-#import psycopg2
-# from flask_migrate import Migrate
+from boto3 import client
+import boto3
 
-DATABASE_URL = os.environ['DATABASE_URL']
-#conn = psycopg2.connect(DATABASE_URL, sslmode='required')
 
 app = Flask(__name__)
+
+DATABASE_URL = os.environ['DATABASE_URL']
 app.secret_key = 'super_secret_key'
 app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-# db = SQLAlchemy(app)
 engine = create_engine(DATABASE_URL)
 Base.metadata.bind = engine
-# migrate = Migrate(app, db)
-
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
@@ -114,11 +111,13 @@ def storeDetails():
                 getFile.filename = (str(getFile.id)+fileExt)
                 newName = getFile.filename
                 #rename path
-                filePath = os.path.join(uploadFolder, newName)
-                getFile.filepath = filePath
+                # filePath = os.path.join(uploadFolder, newName)
+                # getFile.filepath = filePath
                 #rename file to be stored in folder
                 filename = newName
-                file.save(os.path.join(uploadFolder, filename))
+                # file.save(os.path.join(uploadFolder, filename))
+                s3 = boto3.resource('s3')
+                s3.Bucket('actscibucket').put_object(Key=filename, Body=file)
                 session.add(getFile)
                 session.commit()
                 return redirect(url_for('index'))
@@ -129,11 +128,25 @@ def storeDetails():
     else:
         return redirect('upload')
 
+def get_client():
+    return client(
+        's3',
+        'us-east-1',
+        aws_access_key_id = "AKIAI2UXGL2X2OF42AAA",
+        aws_secret_access_key= "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"
+    )
 
 # download files
 @app.route('/download/<name>')
 def download(name):
-    return send_from_directory(uploadFolder, name, as_attachment = True)
+    s3 = get_client()
+    file = s3.get_object(Bucket='actscibucket', Key=name)
+    
+    return Response(
+        file['Body'].read(),
+        mimetype='text/plain',
+        headers={"Content-Disposition": "attachment;filename=%s" % name}
+    )
 
 # search for files
 @app.route('/getSearchInput', methods=['GET', 'POST'])
