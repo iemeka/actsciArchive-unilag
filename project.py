@@ -114,10 +114,9 @@ def storeDetails():
                 # filePath = os.path.join(uploadFolder, newName)
                 # getFile.filepath = filePath
                 #rename file to be stored in folder
-                filename = newName
                 # file.save(os.path.join(uploadFolder, filename))
                 s3 = boto3.resource('s3')
-                s3.Bucket('actscibucket').put_object(Key=filename, Body=file)
+                s3.Bucket('actscibucket').put_object(Key=newName, Body=file)
                 session.add(getFile)
                 session.commit()
                 return redirect(url_for('index'))
