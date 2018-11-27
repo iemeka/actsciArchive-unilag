@@ -1,23 +1,26 @@
-from flask import Flask, render_template, url_for, request, redirect,flash, send_from_directory, Markup, Response
+from flask import Flask, render_template, url_for, request, redirect,flash, send_from_directory, Markup
 from werkzeug.utils import secure_filename
 from db_setup import Base, courseDetails
 import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from flask_sqlalchemy import SQLAlchemy
-from boto3 import client
-import boto3
-
-
-app = Flask(__name__)
+#import psycopg2
+# from flask_migrate import Migrate
 
 DATABASE_URL = os.environ['DATABASE_URL']
+#conn = psycopg2.connect(DATABASE_URL, sslmode='required')
+
+app = Flask(__name__)
 app.secret_key = 'super_secret_key'
 app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
+# db = SQLAlchemy(app)
 engine = create_engine(DATABASE_URL)
 Base.metadata.bind = engine
+# migrate = Migrate(app, db)
+
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
@@ -111,12 +114,17 @@ def storeDetails():
                 getFile.filename = (str(getFile.id)+fileExt)
                 newName = getFile.filename
                 #rename path
-                # filePath = os.path.join(uploadFolder, newName)
-                # getFile.filepath = filePath
+                filePath = os.path.join(uploadFolder, newName)
+                getFile.filepath = filePath
                 #rename file to be stored in folder
+<<<<<<< HEAD
                 # file.save(os.path.join(uploadFolder, filename))
                 s3 = boto3.resource('s3')
                 s3.Bucket('actscibucket').put_object(Key=newName, Body=file)
+=======
+                filename = newName
+                file.save(os.path.join(uploadFolder, filename))
+>>>>>>> parent of 66e8ed5... aws bucket added
                 session.add(getFile)
                 session.commit()
                 return redirect(url_for('index'))
@@ -127,6 +135,7 @@ def storeDetails():
     else:
         return redirect('upload')
 
+<<<<<<< HEAD
 def get_client():
     return client(
         's3',
@@ -135,17 +144,13 @@ def get_client():
         aws_secret_access_key= os.environ['S3_SECRET_KEY']
     )
     
+=======
+
+>>>>>>> parent of 66e8ed5... aws bucket added
 # download files
 @app.route('/download/<name>')
 def download(name):
-    s3 = get_client()
-    file = s3.get_object(Bucket='actscibucket', Key=name)
-    
-    return Response(
-        file['Body'].read(),
-        mimetype='text/plain',
-        headers={"Content-Disposition": "attachment;filename=%s" % name}
-    )
+    return send_from_directory(uploadFolder, name, as_attachment = True)
 
 # search for files
 @app.route('/getSearchInput', methods=['GET', 'POST'])
