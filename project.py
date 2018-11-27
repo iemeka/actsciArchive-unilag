@@ -5,11 +5,9 @@ import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from flask_sqlalchemy import SQLAlchemy
-#import psycopg2
-# from flask_migrate import Migrate
 
 DATABASE_URL = os.environ['DATABASE_URL']
-#conn = psycopg2.connect(DATABASE_URL, sslmode='required')
+
 
 app = Flask(__name__)
 app.secret_key = 'super_secret_key'
