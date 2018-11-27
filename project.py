@@ -128,18 +128,6 @@ def storeDetails():
     else:
         return redirect('upload')
 
-<<<<<<< HEAD
-def get_client():
-    return client(
-        's3',
-        'us-east-1',
-        aws_access_key_id = os.environ['S3_KEY_ID'],
-        aws_secret_access_key= os.environ['S3_SECRET_KEY']
-    )
-    
-=======
-
->>>>>>> parent of 66e8ed5... aws bucket added
 # download files
 @app.route('/download/<name>')
 def download(name):
