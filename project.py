@@ -9,7 +9,7 @@ from flask_sqlalchemy import SQLAlchemy
 DATABASE_URL = os.environ['DATABASE_URL']
 
 
-app = Flask(__name__)
+app = Flask(__name__.split('.')[0])
 app.secret_key = 'super_secret_key'
 app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -110,13 +110,14 @@ def storeDetails():
                 #rename file in database
                 getFile = session.query(courseDetails).filter_by(filename=fileName).one()
                 getFile.filename = (str(getFile.id)+fileExt)
+                session.add(getFile)
                 newName = getFile.filename
                 #rename path
                 filePath = os.path.join(uploadFolder, newName)
                 getFile.filepath = filePath
                 #rename file to be stored in folder
                 file.save(os.path.join(uploadFolder, newName))
-                session.add(getFile)
+                
                 session.commit()
                 return redirect(url_for('index'))
             else:
