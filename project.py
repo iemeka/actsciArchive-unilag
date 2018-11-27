@@ -24,7 +24,7 @@ session = DBSession()
 
 ALLOWED_EXTENSIONS = set(['pdf','doc','docx'])
 linkToCdir = os.path.dirname(__file__)
-pathToFiles = os.path.dirname(os.path.join(linkToCdir))
+pathToFiles = os.path.dirname(os.path.join(linkToCdir, 'static/files/'))
 UPLOAD_FOLDER = pathToFiles
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 uploadFolder = app.config['UPLOAD_FOLDER']
