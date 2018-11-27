@@ -117,14 +117,7 @@ def storeDetails():
                 filePath = os.path.join(uploadFolder, newName)
                 getFile.filepath = filePath
                 #rename file to be stored in folder
-<<<<<<< HEAD
-                # file.save(os.path.join(uploadFolder, filename))
-                s3 = boto3.resource('s3')
-                s3.Bucket('actscibucket').put_object(Key=newName, Body=file)
-=======
-                filename = newName
-                file.save(os.path.join(uploadFolder, filename))
->>>>>>> parent of 66e8ed5... aws bucket added
+                file.save(os.path.join(uploadFolder, newName))
                 session.add(getFile)
                 session.commit()
                 return redirect(url_for('index'))
