@@ -154,10 +154,9 @@ def download(name):
     r = requests.get(download_url)
     with open(name, "wb") as code:
         code.write(r.content)
-    path = os.path.abspath(name)
-    story = Markup("file download complete. Downloaded to <br> %s") % path
+    story = Markup("file download complete.<br> %s") 
     flash(story)
-    return redirect('result')
+    return send_from_directory(linkToCdir,name, as_attachment=True)
     
 
 # search for files
