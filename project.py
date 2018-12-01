@@ -1,8 +1,6 @@
 from flask import Flask, render_template, url_for, request, redirect,flash, send_from_directory, Markup
 from werkzeug.utils import secure_filename
 from db_setup import Base, courseDetails
-import webbrowser
-import urllib2
 import requests
 import os
 from sqlalchemy import create_engine
@@ -91,12 +89,6 @@ def upload_blob(bucket_name, source_file_name, destination_blob_name):
     blob = bucket.blob(destination_blob_name)
     return blob.upload_from_filename(source_file_name)     
 
-
-
-     
-
-
-
 #store store files to folder, details to database and rename both filename on both filesystem and database
 @app.route('/storeDetails', methods=['POST', 'GET'])
 def storeDetails():
@@ -159,7 +151,10 @@ def download(name):
     r = requests.get(download_url)
     with open(name, "wb") as code:
         code.write(r.content)
-    return os.path.abspath(name)
+    path = os.path.abspath(name)
+    story = Markup("file download complete. Downloaded to <br> %s") % path
+    flash(story)
+    return redirect('result')
     
 
 # search for files
