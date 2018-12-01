@@ -2,6 +2,8 @@ from flask import Flask, render_template, url_for, request, redirect,flash, send
 from werkzeug.utils import secure_filename
 from db_setup import Base, courseDetails
 import webbrowser
+import urllib2
+import requests
 import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -90,14 +92,8 @@ def upload_blob(bucket_name, source_file_name, destination_blob_name):
     return blob.upload_from_filename(source_file_name)     
 
 
-def download_blob(bucket_name, source_blob_name, destination_file_name):
-    """Downloads a blob from the bucket."""
-    storage_client = storage.Client()
-    bucket = storage_client.get_bucket(bucket_name)
-    blob = bucket.blob(source_blob_name)
-    download_url = "https://storage-download.googleapis.com/%s/%s" % (bucket_name, source_blob_name)
-    webbrowser.open(download_url)
-    return "download in progress"
+
+     
 
 
 
@@ -154,7 +150,17 @@ def storeDetails():
 # download files
 @app.route('/download/<name>')
 def download(name):
-    return download_blob(bucket_name,name, name)
+    """Downloads a blob from the bucket."""
+    storage_client = storage.Client()
+    bucket = storage_client.get_bucket(bucket_name)
+    blob = bucket.blob(name)
+    download_url = "https://storage-download.googleapis.com/%s/%s" % (bucket_name, name)
+    
+    r = requests.get(download_url)
+    with open(name, "wb") as code:
+        code.write(r.content)
+    return os.path.abspath(name)
+    
 
 # search for files
 @app.route('/getSearchInput', methods=['GET', 'POST'])
