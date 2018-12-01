@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "project-actsci",
+  "private_key_id": "60d303260f9bb0eefc6ab0f427920d42b7a3e97e",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC4rbqEsvXvRPfK\nGcmqCN7OglPI0cnSAFsiwpSWebDHLpcWHgA/b1vSK/wW3qwIgLHE80uE6CYvbhhR\nQ3x/hJ7djSOpMdoqdix22B1tE/AmSzefo9cssnTCEzbWT+BPgxw+rYpLHbk/QN2S\n8KRY7jZ5eT3TKeDbXjFUZDoz4K5ojEbeqxKwblJ6oyjxhgUY8gqkX7X5cpRkdoeH\njJAEqMSfpreVHeYj8O9Y1wN3ahw87y5W7761MAtD4S5qJ0V6KjbtE241LF/3lB7K\nf5Mb34uA33OZMUDXbTJ/tMHGK2/5yb0rualdeL+okcuKIjmDHzmgHDzfMvmjKnnq\n9NCs7RpbAgMBAAECggEAFQ2A+MWp8ZfMI5bi/WY7eBE1WexIdI8j1IeYBrtioqI2\nCQhsgM7CCeiHuVezBtkc6tXNYx5P1BJZ5VGrLKJCtgDz8sLDGxoToYyrdhbSxprG\ngYVc7zR8yO8FzlKWwJmyq5Z+8Gc4CfTsDWcvZQ/q19gxaxQYFQnc18EBPY68cyBx\nBJp2LjpHgUdaKygJrB9PLRmv1hfUUSjwfUhRcnnEmuTg3s4SGwHRqVN9ueH1OxoC\ng9ajyNujSmZTeAdZEubpZsZYOmKs8tJ9RhxC0AfhRkXqaHC55anJ5dww431QmQRa\nWygSdI1Qi4P1LaHzSCW8oZ7aYYggigPeG9/AG3DEYQKBgQDkr4fjmHTZZ2rCRSal\nhzTWOOq/WJuWrJ+DfXzlKSJY8XokEQj6dxwkiQ2iF/jGlmUalcHVXbhIy8355QpR\nh2/9YJ6LUdf1KIRFJiHJJkQZxjY/ydKGOOrn7pSB2MBtF3zmFwK39cCl8Ut8YCa5\nVg4nifLOiugnbgOp6W+9j/qtkQKBgQDOvJrHcz4vYmndl7QECi8g38tH+58W52Rf\n1HEYLC3xiMYG1NBkW1C+OyunKNV0ly4WKI3Vnyv1YwPBejkMIZqEvRanuF0b+vnH\nmQGMRVq0pSKviCB01zIFf8AKNaS2QRTEuzKWX6yvxZSd/Uud++UDKy84yvjAhYZ6\nfL6bjZVDKwKBgCYYC1XhXo2ciY8k/8QRGr8YqhoHw5s81DGOJNDzojIYv5TkdY9r\nafe4ENpQjfNeuCbOjYRiYUFXGc+n1KkyG3iksKRalNPU1PvD11rvkeaNOxozH2uW\nbaMG/hwHJD7H69lUOfK08Et0P3PPfIPhDuiNNTIst3FiBSA3r5JvOn3RAoGAaHSB\nG89NlzF5Xf4ddYETyN9qXYd0HWVyoLy9G8KOwCAkNiVm2Z4N0OAisUX/e/Y60fVR\nnKLc2hJaPnKbylZcNT846CtN2CpZ9BCJ6K7OIsHhIaF9DKwCWSbwB/iMrY16ieAv\nsizLGtCQw7bMcxln3879AAwF3XhZtx+6Suwhg5sCgYEAxLYu2BYYDHzMrfliP1EW\n3VA2GT9uf++Ulq7rlgr3SlN3cbYqENI3WhMUDRkiR8L6NScrffGXGq4GQqlG2OYX\nSp6NAex/dTKDxcMbS/K9UUQSyUx++RE1PmiJU6xLh0z/+aFmG3YpxsSCI/Vq5RGR\nOZMNybbDEYdSMsEXqKzsB60=\n-----END PRIVATE KEY-----\n",
+  "client_email": "service-actsci@project-actsci.iam.gserviceaccount.com",
+  "client_id": "110359670393840326233",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/service-actsci%40project-actsci.iam.gserviceaccount.com"
+}

@@ -1,10 +1,13 @@
 from flask import Flask, render_template, url_for, request, redirect,flash, send_from_directory, Markup
 from werkzeug.utils import secure_filename
 from db_setup import Base, courseDetails
+import webbrowser
 import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from flask_sqlalchemy import SQLAlchemy
+
+from google.cloud import storage
 
 DATABASE_URL = os.environ['DATABASE_URL']
 
@@ -29,6 +32,8 @@ UPLOAD_FOLDER = pathToFiles
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 uploadFolder = app.config['UPLOAD_FOLDER']
 
+bucket_name = "actsci-1543514007"
+
 #----- creating pages - views
 
 @app.route('/')
@@ -45,7 +50,7 @@ def index():
             counter += 1
         else:
             break
-    return render_template('index.html', newlistRecentDetails=newlistRecentDetails)
+    return render_template('index.html', newlistRecentDetails=newlistRecentDetails, bucket_name=bucket_name)
 
 @app.route('/upload')
 def upload():
@@ -75,7 +80,26 @@ def valid_code(code):
             jointcode = splitedcode[0]+splitedcode[1]
             return jointcode.upper()
     else:
-            return code.upper()      
+            return code.upper()
+
+def upload_blob(bucket_name, source_file_name, destination_blob_name):
+    """Uploads a file to the bucket."""
+    storage_client = storage.Client()
+    bucket = storage_client.get_bucket(bucket_name)
+    blob = bucket.blob(destination_blob_name)
+    return blob.upload_from_filename(source_file_name)     
+
+
+def download_blob(bucket_name, source_blob_name, destination_file_name):
+    """Downloads a blob from the bucket."""
+    storage_client = storage.Client()
+    bucket = storage_client.get_bucket(bucket_name)
+    blob = bucket.blob(source_blob_name)
+    download_url = "https://storage-download.googleapis.com/%s/%s" % (bucket_name, source_blob_name)
+    webbrowser.open(download_url)
+    return "download in progress"
+
+
 
 #store store files to folder, details to database and rename both filename on both filesystem and database
 @app.route('/storeDetails', methods=['POST', 'GET'])
@@ -106,10 +130,10 @@ def storeDetails():
                 session.commit()
 
                 filename = secure_filename(file.filename)
-                fileExt = "."+filename.rsplit('.',1)[1].lower()
+                #fileExt = "."+filename.rsplit('.',1)[1].lower()
                 #rename file in database
                 getFile = session.query(courseDetails).filter_by(filename=fileName).one()
-                getFile.filename = (str(getFile.id)+fileExt)
+                getFile.filename = (str(getFile.id)+'_'+getFile.filename)
                 session.add(getFile)
                 newName = getFile.filename
                 #rename path
@@ -117,8 +141,8 @@ def storeDetails():
                 getFile.filepath = filePath
                 #rename file to be stored in folder
                 file.save(os.path.join(uploadFolder, newName))
-                
                 session.commit()
+                upload_blob(bucket_name,filePath, newName)
                 return redirect(url_for('index'))
             else:
                 msg = Markup("Make sure you put in ALL file details before uploading.<br/>Files must be in DOC or PDF format")
@@ -130,7 +154,7 @@ def storeDetails():
 # download files
 @app.route('/download/<name>')
 def download(name):
-    return send_from_directory(uploadFolder, name, as_attachment = True)
+    return download_blob(bucket_name,name, name)
 
 # search for files
 @app.route('/getSearchInput', methods=['GET', 'POST'])
