@@ -7,6 +7,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from flask_sqlalchemy import SQLAlchemy
 
+
 from google.cloud import storage
 
 DATABASE_URL = os.environ['DATABASE_URL']
@@ -33,6 +34,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 uploadFolder = app.config['UPLOAD_FOLDER']
 
 bucket_name = "actsci-1543514007"
+project_id = "project-actsci"
 
 #----- creating pages - views
 
@@ -85,6 +87,7 @@ def valid_code(code):
 def upload_blob(bucket_name, source_file_name, destination_blob_name):
     """Uploads a file to the bucket."""
     storage_client = storage.Client()
+    storage_client = storage.Client.from_service_account_json('project actsci-60d303260f9b.json')
     bucket = storage_client.get_bucket(bucket_name)
     blob = bucket.blob(destination_blob_name)
     return blob.upload_from_filename(source_file_name)     
@@ -144,6 +147,7 @@ def storeDetails():
 def download(name):
     """Downloads a blob from the bucket."""
     storage_client = storage.Client()
+    storage_client = storage.Client.from_service_account_json('project actsci-60d303260f9b.json')
     bucket = storage_client.get_bucket(bucket_name)
     blob = bucket.blob(name)
     download_url = "https://storage-download.googleapis.com/%s/%s" % (bucket_name, name)
