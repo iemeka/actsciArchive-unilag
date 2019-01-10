@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, request, redirect,flash, send_from_directory, Markup
+from flask import Flask, render_template, url_for, request, redirect,flash, send_from_directory, Markup, jsonify
 from werkzeug.utils import secure_filename
 from db_setup import Base, courseDetails
 import requests
@@ -36,6 +36,14 @@ uploadFolder = app.config['UPLOAD_FOLDER']
 
 bucket_name = "actsci-1543514007"
 project_id = "project-actsci"
+
+#API ENDPOINT (GET Request)
+@app.route('/courses/JSON')
+def allcoursejsone():
+    courses = session.query(courseDetails).all()
+    return jsonify(courseDetails=[i.serialize for i in courses])
+
+
 
 #----- creating pages - views
 
@@ -133,7 +141,7 @@ def storeDetails():
                 #rename file to be stored in folder
                 file.save(os.path.join(uploadFolder, newName))
                 session.commit()
-                upload_blob(bucket_name,filePath, newName)
+                #upload_blob(bucket_name,filePath, newName)
                 return redirect(url_for('index'))
             else:
                 msg = Markup("Make sure you put in ALL file details before uploading.<br/>Files must be in DOC or PDF format")
@@ -145,16 +153,16 @@ def storeDetails():
 # download files
 @app.route('/download/<name>')
 def download(name):
-    """Downloads a blob from the bucket."""
-    storage_client = storage.Client.from_service_account_json(pathToCred)
-    bucket = storage_client.get_bucket(bucket_name)
-    blob = bucket.blob(name)
-    download_url = "https://storage-download.googleapis.com/%s/%s" % (bucket_name, name)
+    # """Downloads a blob from the bucket."""
+    # storage_client = storage.Client.from_service_account_json(pathToCred)
+    # bucket = storage_client.get_bucket(bucket_name)
+    # blob = bucket.blob(name)
+    # download_url = "https://storage-download.googleapis.com/%s/%s" % (bucket_name, name)
     
-    r = requests.get(download_url)
-    with open(name, "wb") as code:
-        code.write(r.content)
-    return send_from_directory(linkToCdir,name, as_attachment=True)
+    # r = requests.get(download_url)
+    # with open(name, "wb") as code:
+    #     code.write(r.content)
+    return send_from_directory(pathToFiles,name, as_attachment=True)
     
 
 # search for files
