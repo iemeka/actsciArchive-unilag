@@ -8,7 +8,7 @@ from sqlalchemy.orm import sessionmaker
 from flask_sqlalchemy import SQLAlchemy
 
 
-from google.cloud import storage
+# from google.cloud import storage
 
 DATABASE_URL = os.environ['DATABASE_URL']
 
