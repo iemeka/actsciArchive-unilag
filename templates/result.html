@@ -40,7 +40,7 @@
                      {% endwith %}
                      {% for course in getMatchingDetails %}
                     <p>
-                        <h3><a href="{{url_for('download', name = course.filename)}}">{{course.coursetitle}}</a></h3>
+                        <h3><a href="{{url_for('download', file_id = course.download_id, name = course.filename)}}">{{course.coursetitle[:-7]}}<span class="uid" >{{course.coursetitle[-7:]}}</span></a></h3>
                         <span class="code">{{course.coursecode}}</span> &#8226 <span class="category">{{course.category}}</span>
                     </p>
                     {% endfor %}

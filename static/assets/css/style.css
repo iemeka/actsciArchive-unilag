@@ -10,6 +10,13 @@ button:focus {
     outline: none;
 }
 
+.uid{
+    color: red;
+    font-size: 13px !important;
+    text-transform: lowercase !important;
+    
+}
+
 
 .page {
     display: flex;

@@ -1,28 +1,29 @@
+# ---upload and download  imports ---
+from __future__ import print_function
+import os
+from apiclient import discovery
+from httplib2 import Http
+from oauth2client import file, client, tools
+import io
+from googleapiclient.http import MediaIoBaseDownload
+# --------------
 from flask import Flask, render_template, url_for, request, redirect,flash, send_from_directory, Markup, jsonify
 from werkzeug.utils import secure_filename
 from db_setup import Base, courseDetails
 import requests
-import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from flask_sqlalchemy import SQLAlchemy
 
 
-# from google.cloud import storage
-
 DATABASE_URL = os.environ['DATABASE_URL']
-
-
 app = Flask(__name__.split('.')[0])
 app.secret_key = 'super_secret_key'
 app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-# db = SQLAlchemy(app)
 engine = create_engine(DATABASE_URL)
 Base.metadata.bind = engine
-# migrate = Migrate(app, db)
-
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
@@ -32,17 +33,7 @@ pathToFiles = os.path.dirname(os.path.join(linkToCdir, 'static/files/'))
 pathToCred = os.path.join(linkToCdir,'project-actsci-60d303260f9b.json')
 UPLOAD_FOLDER = pathToFiles
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-uploadFolder = app.config['UPLOAD_FOLDER']
-
-bucket_name = "actsci-1543514007"
-project_id = "project-actsci"
-
-#API ENDPOINT (GET Request)
-@app.route('/courses/JSON')
-def allcoursejsone():
-    courses = session.query(courseDetails).all()
-    return jsonify(courseDetails=[i.serialize for i in courses])
-
+bucket = app.config['UPLOAD_FOLDER']
 
 
 #----- creating pages - views
@@ -61,7 +52,7 @@ def index():
             counter += 1
         else:
             break
-    return render_template('index.html', newlistRecentDetails=newlistRecentDetails, bucket_name=bucket_name)
+    return render_template('index.html', newlistRecentDetails=newlistRecentDetails)
 
 @app.route('/upload')
 def upload():
@@ -76,9 +67,7 @@ def search():
 def result():
     return render_template('result.html')
 
-
 #----- Backend functionalities
-
 
 #check for valid extention
 def valid_ext(filename):
@@ -93,12 +82,23 @@ def valid_code(code):
     else:
             return code.upper()
 
-def upload_blob(bucket_name, source_file_name, destination_blob_name):
-    """Uploads a file to the bucket."""
-    storage_client = storage.Client.from_service_account_json(pathToCred)
-    bucket = storage_client.get_bucket(bucket_name)
-    blob = bucket.blob(destination_blob_name)
-    return blob.upload_from_filename(source_file_name)     
+def upload_file(newfile):
+    SCOPES = 'https://www.googleapis.com/auth/drive'
+    store = file.Storage('storage.json')
+    creds = store.get()
+    filename = os.path.basename(newfile)
+    if not creds or creds.invalid:
+        flow = client.flow_from_clientsecrets('client_secret.json', SCOPES)
+        creds = tools.run_flow(flow, store)
+        
+    DRIVE = discovery.build('drive', 'v2', http=creds.authorize(Http()))
+
+    metadata = {'title': filename, 'parents':[{'id': '1w5m48c-7CrcaCOuI9aGnxeXKIoDCutcN', 'kind':'drive#childList'}]}
+    res = DRIVE.files().insert(body=metadata,
+            media_body=newfile, fields='mimeType,exportLinks,id').execute()
+    if res:
+        return res['id']
+         
 
 #store store files to folder, details to database and rename both filename on both filesystem and database
 @app.route('/storeDetails', methods=['POST', 'GET'])
@@ -112,36 +112,43 @@ def storeDetails():
             courseTitle = request.form['course-title']
             courseCode = valid_code(request.form['course-code'])
             Category = request.form['category']
-            Year = request.form['year']
-            if (courseTitle and courseCode and Category and Year and valid_ext(file.filename) and 'file-name' in request.files):    
+            if (courseTitle and courseCode and Category and valid_ext(file.filename) and 'file-name' in request.files):
+
+                # first upload file to base folder
                 fileName = secure_filename(file.filename)
-                filePath = os.path.join(uploadFolder, fileName)
+                file.save(os.path.join(bucket, fileName))
+                filePath = os.path.join(bucket, fileName)
+
+                # second push file to cloud
+                download_id = upload_file(filePath)  
+
+                # store file details in data base 
+                # past question will have the year beside it - past question-2019
                 newDetail = courseDetails(
                     filepath = filePath,
                     filename = fileName,
                     coursetitle = courseTitle,
                     coursecode = courseCode,
+                    download_id = download_id,
                     category = Category,
-                    year = Year,
                 )
                 session.rollback()
                 session.add(newDetail)
                 session.commit()
 
+                # rename file with course title field
                 filename = secure_filename(file.filename)
-                #fileExt = "."+filename.rsplit('.',1)[1].lower()
+                fileExt = "."+filename.rsplit('.',1)[1].lower()
+
                 #rename file in database
                 getFile = session.query(courseDetails).filter_by(filename=fileName).one()
-                getFile.filename = (str(getFile.id)+'_'+getFile.filename)
+                file_num = str(getFile.id)
+                newName = getFile.coursetitle+" uid: "+file_num
+                getFile.filename = newName+fileExt
+                getFile.coursetitle = newName
                 session.add(getFile)
-                newName = getFile.filename
-                #rename path
-                filePath = os.path.join(uploadFolder, newName)
-                getFile.filepath = filePath
-                #rename file to be stored in folder
-                file.save(os.path.join(uploadFolder, newName))
                 session.commit()
-                #upload_blob(bucket_name,filePath, newName)
+
                 return redirect(url_for('index'))
             else:
                 msg = Markup("Make sure you put in ALL file details before uploading.<br/>Files must be in DOC or PDF format")
@@ -151,18 +158,27 @@ def storeDetails():
         return redirect('upload')
 
 # download files
-@app.route('/download/<name>')
-def download(name):
-    # """Downloads a blob from the bucket."""
-    # storage_client = storage.Client.from_service_account_json(pathToCred)
-    # bucket = storage_client.get_bucket(bucket_name)
-    # blob = bucket.blob(name)
-    # download_url = "https://storage-download.googleapis.com/%s/%s" % (bucket_name, name)
-    
-    # r = requests.get(download_url)
-    # with open(name, "wb") as code:
-    #     code.write(r.content)
-    return send_from_directory(pathToFiles,name, as_attachment=True)
+@app.route('/download/<file_id>')
+def download(file_id):
+    SCOPES = 'https://www.googleapis.com/auth/drive'
+    store = file.Storage('storage.json')
+    creds = store.get()
+    if not creds or creds.invalid:
+        flow = client.flow_from_clientsecrets('client_secret.json', SCOPES)
+        creds = tools.run_flow(flow, store)
+        
+    DRIVE = discovery.build('drive', 'v2', http=creds.authorize(Http()))
+    request = DRIVE.files().get_media(fileId=file_id)
+    # flash('Downloading...')
+    getFile = session.query(courseDetails).filter_by(download_id=file_id).one()
+    file_name = getFile.filename
+    print(file_name)
+    fh = io.FileIO(os.path.join(bucket, file_name), mode='w')
+    downloader = MediaIoBaseDownload(fh, request)
+    done = False
+    while done is False:
+        status, done = downloader.next_chunk()
+    return send_from_directory(bucket,file_name, as_attachment=True)
     
 
 # search for files

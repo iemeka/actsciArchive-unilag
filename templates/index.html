@@ -26,6 +26,13 @@
                     <input class="search-area" type="text" name='code' placeholder="search by course code" />
                     <button type="submit" value="submit"><img src="{{url_for('static', filename='assets/img/icon48.png')}}"></button>
                 </form>
+                {% with messages = get_flashed_messages()  %}
+                        {% if messages %}
+                            {% for message in messages %}
+                        <strong class="flash-message">{{message}}</strong>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
             </div>
             <div class="section result">
                 <div class="hold-result">
@@ -33,7 +40,7 @@
 
                     {% for detail in newlistRecentDetails %}
                     <p> 
-                    <a  href="{{url_for('download', name = detail.filename)}}"><h3>{{detail.coursetitle}}</h3></a>
+                    <a  href="{{url_for('download', file_id = detail.download_id)}}"><h3 class="title">{{detail.coursetitle[:-7]}}<span class="uid" >{{detail.coursetitle[-7:]}}</span></h3></a>
                     <span class="code">{{detail.coursecode}}</span> &#8226 <span class="category">{{detail.category}}</span>
                     </p>
                     {% endfor %}

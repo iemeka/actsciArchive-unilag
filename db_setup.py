@@ -15,18 +15,8 @@ class courseDetails(Base):
     coursetitle = Column(String(350), nullable=False)
     coursecode = Column(String(7), nullable=False)
     category = Column(String(350), nullable=False)
+    download_id = Column(String(350), nullable=False)
     year = Column(Integer)
-
-    @property
-    def serialize(self):
-        return {
-            'file name':self.filename,
-            'course title': self.coursetitle,
-            'course code': self.coursecode,
-            'category':self.category
-        }
-
-
 
 
 engine = create_engine(os.environ['DATABASE_URL'])
