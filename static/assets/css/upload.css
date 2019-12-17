@@ -40,7 +40,7 @@ nav ul li:nth-child(3) a{
 
 .upload-section{
     /* border:1px solid black; */
-    margin-top:3em;
+    margin-top:2.6em;
     box-shadow: inset 1px 1px 30px rgba(0,0,0,0.24), inset -1px -1px 30px rgba(0,0,0,0.24);
     padding: 0.6em  0em 1.4em 1.3em;
 }
@@ -56,7 +56,7 @@ nav ul li:nth-child(3) a{
 }
 
 input[type=file]{
-    background-color: #fff;
+    background-color: transparent;
     margin-left: 0em;
 }
 
@@ -96,19 +96,29 @@ input[type=submit]{
     text-transform: capitalize
 }
 
-@media only screen and (max-width:400px){
+@media only screen and (max-width:500px){
     input[name=course-title]{
         margin-left: 0em;
-        display:block
+        display:block;
     }
     
     input[name=course-code]{
         margin-left: 0em;
-        display:block
+        display:block;
+
     }
     
     select[name=category]{
         margin-left: 0em;
+    }
+
+    nav ul li a{
+        font-size: 10px;
+  
+    }
+
+    input[type=text]{
+        width: 90% !important;
     }
     
 }

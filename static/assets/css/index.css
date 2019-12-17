@@ -158,7 +158,7 @@ form + nav ul li:nth-child(3) a{
 }
 
 footer{
-    height: 260px;
+    height: 7.5em;
     bottom: 0px !important;
     width: 100%;
     max-width: 822px;
