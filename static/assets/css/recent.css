@@ -105,6 +105,7 @@ form + nav ul li a{
     text-transform: uppercase;
 }
 
+
 form + nav ul li:nth-child(2){
     float: right;
 }
@@ -114,8 +115,12 @@ form + nav ul li:nth-child(2) a{
     font-weight: bold;
     padding: 7px 20px;
     color: #fff !important;
-    background-color: #da3630ff;
+    background-color: #ac0136ff;
     border-radius:3px
+}
+
+form + nav ul li:nth-child(2) a:hover{
+    background-color:rgb(126, 10, 47);
 }
 
 form + nav ul li:nth-child(1){

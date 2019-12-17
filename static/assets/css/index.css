@@ -157,6 +157,11 @@ form + nav ul li:nth-child(3) a{
     color: #6bbb47ff !important
 }
 
+form + nav ul li a:hover{
+    border-bottom: double;
+    cursor: pointer;
+}
+
 footer{
     height: 7.5em;
     bottom: 0px !important;
