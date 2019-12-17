@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <meta charset="utf-8">
+        <meta name="description" content="file upload and download">
+        <meta name="author" content="emeka">
+        <title>home</title>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='assets/css/reset.css')}}">
+        <link rel="stylesheet" media="screen" type="text/css" href="{{url_for('static', filename='assets/css/recent.css')}}">
+    </head>
+    <body>
+        <div class="container">
+            <div class="fixed-head">
+                <header>
+                    <a href="{{url_for('index')}}">
+                        <h1>unilag logo and actuarial science logo</h1>
+                    </a>
+                    <a href="{{url_for('index')}}">
+                        <h2>repository</h2>
+                    </a>
+                </header>
+                <hr class="line">
+                <section class="content">
+                    <form method="POST" action="{{url_for('getSearchInput')}}" enctype="multipart/form-data">
+                        <div class="search-inputs">
+                            <input type="search" name="code" placeholder="enter course code" required>
+                            <input type="submit" name="submit">
+                        </div>
+                    </form>
+                    <nav>
+                        <ul>
+                            <li>recent uploads</li>
+                            <li><a href="{{url_for('upload')}}">upload</a></li>
+                        </ul>
+                    </nav>
+                </section>
+            </div>
+            
+            <section class="course-list">
+                {% for detail in newlistRecentDetails %}
+                <article>
+                    <header>
+                        <a  href="{{url_for('download', file_id = detail.download_id)}}">{{detail.coursetitle[:-7]}}</a>
+                    </header>
+                    <ul>
+                        <li>{{detail.coursecode}}</li>
+                        <li style="font-family: Arial">&#8226</li>
+                        <li>{{detail.category}}</li>
+                        <li style="font-family: Arial">&#8226</li>
+                        <li>id: {{detail.id}}</li>
+                    </ul>
+                </article>
+                {% endfor %}
+                
+            </section>
+            <footer><div class="box"></div><span class="author">&#187;nkwocha emeka&#171;</span></footer>
+        </div>
+    </body>
+</html>

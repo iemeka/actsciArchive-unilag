@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="349.75339mm"
+   height="51.966774mm"
+   viewBox="0 0 349.75339 51.966774"
+   version="1.1"
+   id="svg1314"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="logooo.svg">
+  <defs
+     id="defs1308">
+    <clipPath
+       id="clipPath1539"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         sodipodi:nodetypes="ccccccccc"
+         inkscape:connector-curvature="0"
+         id="path1541"
+         d="m 31.945826,33.387276 1.960388,4.091247 3.97192,-0.03409 0.05114,8.04612 c -1.178808,2.940656 -3.579534,4.195913 -6.051637,5.352716 -2.501082,-1.344157 -4.872823,-2.809819 -5.898214,-5.540232 l 0.01705,-7.807462 3.716219,-0.03409 z"
+         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="663.61003"
+     inkscape:cy="-115.22362"
+     inkscape:document-units="mm"
+     inkscape:current-layer="g1915"
+     showgrid="false"
+     inkscape:window-width="1867"
+     inkscape:window-height="1056"
+     inkscape:window-x="53"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata1311">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-32.306751,-51.261263)">
+    <g
+       transform="matrix(0.17218038,0,0,0.3255814,-125.43455,423.92348)"
+       id="g1293">
+      <g
+         id="g1915"
+         transform="matrix(4.6170146,0,0,1.8904847,-3899.6295,1489.1847)">
+        <g
+           id="g1998">
+          <text
+             transform="scale(0.91790336,1.0894393)"
+             id="text891"
+             y="-1218.078"
+             x="1132.9961"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:82.28123474px;line-height:1.25;font-family:'TeX Gyre Bonum';-inkscape-font-specification:'TeX Gyre Bonum';letter-spacing:0px;word-spacing:0px;fill:#013b60;fill-opacity:1;stroke:none;stroke-width:2.57128859"
+             xml:space="preserve"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:70.55555725px;font-family:Uroob;-inkscape-font-specification:Uroob;fill:#013b60;fill-opacity:1;stroke-width:2.57128859"
+               y="-1218.078"
+               x="1132.9961"
+               id="tspan889"
+               sodipodi:role="line">COURSE REPOSITORY </tspan></text>
+          <rect
+             y="-1388.864"
+             x="1205.4548"
+             height="75.792435"
+             width="273.23895"
+             id="rect1166"
+             style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:8.63682842;stroke-miterlimit:4;stroke-dasharray:51.82096847, 17.27365616;stroke-dashoffset:28.54501915;stroke-opacity:1" />
+          <text
+             transform="scale(0.91790337,1.0894393)"
+             id="text891-0"
+             y="-1218.1057"
+             x="1133.3051"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:82.28123474px;line-height:1.25;font-family:'TeX Gyre Bonum';-inkscape-font-specification:'TeX Gyre Bonum';letter-spacing:0px;word-spacing:0px;fill:#013b60;fill-opacity:1;stroke:none;stroke-width:2.57128859"
+             xml:space="preserve"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:70.55555725px;font-family:Uroob;-inkscape-font-specification:Uroob;fill:#013b60;fill-opacity:1;stroke-width:2.57128859"
+               y="-1218.1057"
+               x="1133.3051"
+               id="tspan889-9"
+               sodipodi:role="line">COURSE REPOSITORY </tspan></text>
+          <rect
+             y="-1388.864"
+             x="1205.4548"
+             height="75.792435"
+             width="273.23895"
+             id="rect1166-6"
+             style="opacity:0.65;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:8.63682842;stroke-miterlimit:4;stroke-dasharray:51.82096893, 17.27365631;stroke-dashoffset:28.54501915;stroke-opacity:1" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

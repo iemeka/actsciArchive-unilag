@@ -1,53 +1,67 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-        <title></title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='assets/css/result.css')}}" />        
-        <link rel="stylesheet" type="text/css" href= "{{url_for('static', filename='assets/css/style.css')}}" />
+        <meta charset="utf-8">
+        <meta name="description" content="file upload and download">
+        <meta name="author" content="emeka">
+        <title>home</title>
+        <link rel="stylesheet" media="screen" type="text/css" href="{{url_for('static', filename='assets/css/recent.css')}}">
+        <link rel="stylesheet" media="screen" type="text/css" href="{{url_for('static', filename='assets/css/search.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='assets/css/reset.css')}}">
     </head>
     <body>
-
-        <div class="page">
-            <div class="section header">
-                <div class="in-header logo-name">
-                    <a href="{{url_for('index')}}"><img src="{{url_for('static', filename='assets/img/logo-name.svg')}}" /></a>
-                </div>
-                <div class="in-header logo-symbol">
-                    <img src="{{url_for('static', filename='assets/img/Unilag-logo.png')}}">
-                </div>
-                <div class="in-header">
-                    <a href="{{url_for('upload')}}">
-                        <button class="btn upload-btn">upload</button>
+        <div class="container">
+            <div class="fixed-head">
+                <header>
+                    <a href="{{url_for('index')}}">
+                        <h1>unilag logo and actuarial science logo</h1>
                     </a>
-                </div>
+                    <a href="{{url_for('index')}}">
+                        <h2>repository</h2>
+                    </a>
+                </header>
+                <hr class="line">
+                <section class="content">
+                    <form method="POST" action="{{url_for('getSearchInput')}}" enctype="multipart/form-data">
+                        <div class="search-inputs">
+                            <input type="search" name="code" placeholder="enter course code" required>
+                            <input type="submit" name="submit">
+                        </div>
+                    </form>
+                    <nav>
+                        <ul>
+                            <li>Results for {{displayCode}}</li>
+                            <li><a href="{{url_for('upload')}}">upload</a></li>
+                        </ul>
+                    </nav>
+                </section>
             </div>
-            <div class="section search">
-                <form class="form" action="{{url_for('getSearchInput')}}" method="POST" enctype="multipart/form-data">
-                    <h2 class="h2-3">showing results for {{displayCode}}</h2>
-                    <input class="search-area" name='code' type="text" placeholder="search by course code" />
-                    <button type="submit"><img src="{{url_for('static',filename='assets/img/icon48.png')}}"></button>
-                </form>
-            </div>
-            <div class="section result">
-                <div class="hold-result">
-                    <h1>search results</h1>
-                    {% with messages = get_flashed_messages()  %}
-                        {% if messages %}
-                            {% for message in messages %}
-                        <strong class="flash-message">{{message}}</strong>
-                            {% endfor %}
-                        {% endif %}
-                     {% endwith %}
-                     {% for course in getMatchingDetails %}
-                    <p>
-                        <h3><a href="{{url_for('download', file_id = course.download_id, name = course.filename)}}">{{course.coursetitle[:-7]}}<span class="uid" >{{course.coursetitle[-7:]}}</span></a></h3>
-                        <span class="code">{{course.coursecode}}</span> &#8226 <span class="category">{{course.category}}</span>
-                    </p>
+            
+            <section class="course-list">
+            {% with messages = get_flashed_messages()  %}
+                {% if messages %}
+                    {% for message in messages %}
+                <small>{{message}}</small>
                     {% endfor %}
-                </div>
-               
-            </div>
+                {% endif %}
+            {% endwith %}
+            {% for course in getMatchingDetails %}
+                <article>
+                    <header>
+                        <a  href="{{url_for('download', file_id = course.download_id, name = course.filename)}}">{{course.coursetitle[:-7]}}</a>
+                    </header>
+                    <ul>
+                        <li>{{course.coursecode}}</li>
+                        <li style="font-family: Arial">&#8226</li>
+                        <li>{{course.category}}</li>
+                        <li style="font-family: Arial">&#8226</li>
+                        <li>id: {{course.id}}</li>
+                    </ul>
+                </article>
+            {% endfor %}
+            </section>
+            <footer><div class="box"></div><span class="author">&#187;nkwocha emeka&#171;</span></footer>
         </div>
-
     </body>
 </html>

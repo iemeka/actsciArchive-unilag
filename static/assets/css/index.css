@@ -1,0 +1,209 @@
+.container{
+    /* border:1px solid #dedcf1; */
+    max-width: 800px;
+    min-height: 100vh;
+    margin: auto;
+    padding: 0px 10px 0px 10px;
+    box-shadow: 0px 0px 5px 1px rgb(119, 111, 111);
+}
+
+header{
+    display: block;
+    overflow: hidden;
+}
+
+header a:nth-child(1){
+    width: 44.5%;
+    display: inline;
+    float: left;
+}
+
+header a:nth-child(2){
+    width: 37.5%;
+    float: right;
+}
+
+header a:nth-child(1) h1{
+    /* border: 1px solid black; */
+    text-indent: -99999px;
+    background:
+    url(../img/Unilag-logo.png) left no-repeat,
+    url(../img/actsci-logo.png) right 30px center no-repeat;
+    background-size: 37% auto;
+    max-width: 170px;
+    height:65px;
+}
+
+header a:nth-child(2) h2{
+    /* border: 1px solid black; */
+    text-indent: -99999px;
+    background: url(../img/logooo.png) center no-repeat;
+    background-size: 100%;
+    max-width: 300px;
+    height:65px;
+}
+
+.line{
+    border: none;
+    height: 0.5px !important;
+    background-image: -webkit-radial-gradient(circle, #000 .05%,#fff);
+}
+
+hgroup{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: monospace;
+    margin-top: 15px  !important;
+}
+
+hgroup h3{
+    color: #6666666f;
+    font-size: 20px;
+}
+
+hgroup h2{
+ color: #000000;
+ font-size: 30px;
+}
+
+hgroup h4{
+    text-align: center;
+    text-indent: -99999px;
+    background: url(../img/dot-dot.png) no-repeat center;
+    margin-top: -6px;
+}
+
+
+form{
+    /* border: 1px solid black !important; */
+    margin-top: 30px !important;    
+}
+
+.search-inputs{
+    border: 1px solid black;
+    width: 90%;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 1px rgb(119, 111, 111);
+    margin: auto;
+    padding-right: 5px;
+}
+
+input[type=search]{
+    border:none;
+    width: 90%;
+    height:40px;
+    border-radius: 10px;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+input[type=submit]{
+    border:none;
+    text-indent: -99999px;
+    background: url(../img/icon48.png) no-repeat center;
+    background-size: 29px;
+    height:30px;
+    width:8%;
+    cursor: pointer;
+    right:30px;
+}
+
+input[type=search]::placeholder{
+    font-size:20px;
+    text-align: center;
+    letter-spacing: 3px;
+    font-family: sans-serif;
+    color:#c2bebe
+}
+
+form + nav{
+    text-align: center;
+    margin-top:9px;
+}
+
+form + nav ul{
+    display: block;
+}
+
+form + nav ul li{
+    display: inline;
+
+}
+
+form + nav ul li a{
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #000000 !important;
+    font-weight: bold;
+}
+
+form + nav ul li:nth-child(2) a{
+    border-left:2px solid black;
+    border-right:2px solid black;
+    padding: 0px 5px 0px 5px
+}
+
+form + nav ul li:nth-child(1) a{
+    color: #3c6faeff !important
+}
+
+form + nav ul li:nth-child(2) a{
+    color: #da3630ff !important
+}
+
+form + nav ul li:nth-child(3) a{
+    color: #6bbb47ff !important
+}
+
+footer{
+    height: 260px;
+    bottom: 0px !important;
+    width: 100%;
+    max-width: 822px;
+    position: fixed;
+    margin: auto;
+    margin-left: -11px !important;
+    background: url(../img/footimg.png)no-repeat bottom 0px center !important;
+    background-size: 100% !important;
+}
+
+.author{
+    position: absolute;
+    bottom: 0px !important;
+    right: 0px;
+    background-color: #242424ff;
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff !important;
+    font-size: 15px;
+    padding-right: 3px;
+    font-weight: bold
+}
+
+
+/* Mobile styles */
+@media only screen and (max-width:500px){
+    hgroup h3{
+        font-size: 13px;
+    }
+
+    hgroup h2{
+        font-size: 20px;
+    }
+
+    input[type=search]::placeholder{
+        font-size: 17px;
+        text-align: left;
+        padding-left: 10px;
+    }
+    form + nav ul li a{
+        font-size: 10px;
+    }
+
+    .author{
+        right: -2px;
+    }
+
+}
+

@@ -42,6 +42,11 @@ bucket = app.config['UPLOAD_FOLDER']
 @app.route('/home')
 @app.route('/index')
 def index():
+    return render_template('index.html')
+
+
+@app.route('/recent')
+def recent():
     listRecentDetails = session.query(courseDetails).all()
     revlistRecentDetails = reversed(listRecentDetails)
     counter=0
@@ -52,7 +57,7 @@ def index():
             counter += 1
         else:
             break
-    return render_template('index.html', newlistRecentDetails=newlistRecentDetails)
+    return render_template('recent.html', newlistRecentDetails=newlistRecentDetails)
 
 @app.route('/upload')
 def upload():
@@ -106,7 +111,7 @@ def storeDetails():
     if request.method == 'POST':
         file = request.files['file-name']
         if file.filename == " ":
-            flash("you didnt select any file")
+            flash("pls select a file")
             return redirect('upload')
         else:
             courseTitle = request.form['course-title']
@@ -149,7 +154,7 @@ def storeDetails():
                 session.add(getFile)
                 session.commit()
 
-                return redirect(url_for('index'))
+                return redirect(url_for('recent'))
             else:
                 msg = Markup("Make sure you put in ALL file details before uploading.<br/>Files must be in DOC or PDF format")
                 flash(msg)

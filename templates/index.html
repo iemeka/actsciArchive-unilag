@@ -1,53 +1,46 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-        <title></title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-        <link rel="stylesheet" type="text/css" href= "{{url_for('static', filename='assets/css/style.css')}}" />
+        <meta charset="utf-8">
+        <meta name="description" content="file upload and download">
+        <meta name="author" content="emeka">
+        <title>home</title>
+        <link rel="stylesheet" media="screen" type="text/css" href="{{url_for('static', filename='assets/css/index.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='assets/css/reset.css')}}">
     </head>
     <body>
-
-        <div class="page">
-            <div class="section header">
-                <div class="in-header logo-name">
-                    <a href="{{url_for('index')}}"><img src="{{url_for('static', filename='assets/img/logo-name.svg')}}" /></a>
-                </div>
-                <div class="in-header logo-symbol">
-                    <img src="{{url_for('static', filename='assets/img/Unilag-logo.png')}}">
-                </div>
-                <div class="in-header">
-                    <a href="{{url_for('upload')}}">
-                        <button class="btn upload-btn">upload</button>
-                    </a>
-                </div>
-            </div>
-            <div class="section search">
-                <form class="form"  action="{{url_for('getSearchInput')}}" method="POST" enctype="multipart/form-data">
-                    <h2 class="h2">course repository</h2>
-                    <input class="search-area" type="text" name='code' placeholder="search by course code" />
-                    <button type="submit" value="submit"><img src="{{url_for('static', filename='assets/img/icon48.png')}}"></button>
+        <div class="container">
+            <header>
+                <a href="{{url_for('index')}}">
+                    <h1>unilag logo and actuarial science logo</h1>
+                </a>
+                <a href="{{url_for('index')}}">
+                    <h2>repository</h2>
+                </a>
+            </header>
+            <hr class="line">
+            <section class="content">
+                <hgroup>
+                    <h3>university of lagos</h3>
+                    <h2>actuarial science</h2>
+                    <h4> dotted line</h4>
+                </hgroup>
+                <form method="POST" action="{{url_for('getSearchInput')}}" enctype="multipart/form-data">
+                    <div class="search-inputs">
+                        <input type="search" name="code" placeholder="enter course code" required>
+                        <input type="submit" name="submit">
+                    </div>
                 </form>
-                {% with messages = get_flashed_messages()  %}
-                        {% if messages %}
-                            {% for message in messages %}
-                        <strong class="flash-message">{{message}}</strong>
-                            {% endfor %}
-                        {% endif %}
-                    {% endwith %}
-            </div>
-            <div class="section result">
-                <div class="hold-result">
-                    <h1>Recent Uploads</h1>
-
-                    {% for detail in newlistRecentDetails %}
-                    <p> 
-                    <a  href="{{url_for('download', file_id = detail.download_id)}}"><h3 class="title">{{detail.coursetitle[:-7]}}<span class="uid" >{{detail.coursetitle[-7:]}}</span></h3></a>
-                    <span class="code">{{detail.coursecode}}</span> &#8226 <span class="category">{{detail.category}}</span>
-                    </p>
-                    {% endfor %}
-                </div>
-               
-            </div>
+                <nav>
+                    <ul>
+                        <li><a href="{{url_for('recent')}}">recent uploads</a></li>
+                        <li><a href="{{url_for('upload')}}">upload file</a></li>
+                        <li><a href="{{url_for('index')}}">search</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <footer><span class="author">&#187;nkwocha emeka&#171;</span></footer>
         </div>
-
     </body>
 </html>
