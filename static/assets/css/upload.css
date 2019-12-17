@@ -1,83 +1,114 @@
-.upload-form {
-    width: 100%;
-    margin: auto 10%;
-}
-
-.upload-form h2{
-    display: block;
-    text-transform: capitalize;
-    font-size: 25px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(103, 112, 124);
+nav{
     text-align: center;
-    letter-spacing: 3px;
-    word-spacing: 5px;
-    font-weight: normal;
-    margin-top: 3%; 
-    margin-bottom: 7%
+    margin-top:9px;
 }
 
-.upload-form label {
+nav ul{
     display: block;
-    font-size: 20px;
-    font-weight: normal;
-    font-family: Suruma;
-    margin-left: 5%;
+}
+
+nav ul li{
+    display: inline;
+
+}
+
+nav ul li a{
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #000000 !important;
+    font-weight: bold;
+}
+
+nav ul li:nth-child(2) a{
+    border-left:2px solid black;
+    border-right:2px solid black;
+    padding: 0px 5px 0px 5px
+}
+
+nav ul li:nth-child(1) a{
+    color: #3c6faeff !important
+}
+
+nav ul li:nth-child(2) a{
+    color: #da3630ff !important
+}
+
+nav ul li:nth-child(3) a{
+    color: #6bbb47ff !important
+}
+
+.upload-section{
+    /* border:1px solid black; */
+    margin-top:5em;
+    box-shadow: inset 1px 1px 30px rgba(0,0,0,0.24), inset -1px -1px 30px rgba(0,0,0,0.24);
+    padding: 0.6em  0em 1.4em 1.3em;
+}
+
+.upload-section form ul li{
+    margin-bottom: 15px;
+}
+
+.upload-section label{
     text-transform: capitalize;
-    color: #3333338d
-    
-}
-
-form.upload-form input::-webkit-input-placeholder{
-    color: #dddddd;
-
-}
-
-.cat,
-form.upload-form input[type=file],
-form.upload-form input[type=text] {
-    padding: 7px;
     font-size: 17px;
-    float: left;
-    width: 90%;
-    margin: 0 5% 0 5%;
-    border: none;
-    border-bottom: 1px solid #b3b3b38b;
-    margin-bottom: 5%;
-    align-self: auto;
+    font-family: monospace;
 }
 
+input[type=file]{
+    background-color: rgb(235, 227, 227);
+    margin-left: 0em;
+}
 
-.cat, option{
-    color: rgb(107, 103, 103);
-    background-color: white
+input[type=text]{
+    border:0px;
+    border-bottom:1px solid black;
+    width: 50% !important;
+    font-family: monospace;
+    font-size: 15px;
 
 }
 
-.upload-btn-2 {
-    background-color: #6bbb47ff;
-    display: block;
-    margin: 10% auto;
-    text-decoration: none;
-    padding: 12px 35px;
-    border-radius: 3px;
+input[name=course-title]{
+    margin-left: 1em;
 }
 
-.flash-message{
-    color: #581845;
-    text-align:left;
-    padding: 5px;
-    font-family: tahoma;
-    font-weight: 100 !important;
-    display: block;
+input[name=course-code]{
+    margin-left: 1.8em;
 }
 
-.clear{
-    clear: both;
+select[name=category]{
+    margin-left: 4.1em;
+    background-color: #fff;
+    border:0px;
+    border-bottom:1px solid black;
 }
 
-@media only screen and (min-width:961px){
-    .upload-form label{
-        font-size: 25px;
+input[type=submit]{
+    border:0px;
+    margin-top: 20px;
+    margin-left: 0px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: #fff;
+    padding: 0.5em 1.5em 0.5em 1.5em;
+    background-color: #ac0136ff;
+    text-transform: capitalize
+}
+
+@media only screen and (max-width:400px){
+    input[name=course-title]{
+        margin-left: 0em;
+        display:block
     }
+    
+    input[name=course-code]{
+        margin-left: 0em;
+        display:block
+    }
+    
+    select[name=category]{
+        margin-left: 0em;
+    }
+    
 }

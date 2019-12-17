@@ -98,7 +98,7 @@ input[type=search]{
     font-size: 20px;
 }
 
-input[type=submit]{
+input[type=search] + input[type=submit]{
     border:none;
     text-indent: -99999px;
     background: url(../img/icon48.png) no-repeat center;
