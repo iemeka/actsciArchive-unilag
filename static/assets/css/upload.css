@@ -40,7 +40,7 @@ nav ul li:nth-child(3) a{
 
 .upload-section{
     /* border:1px solid black; */
-    margin-top:5em;
+    margin-top:3em;
     box-shadow: inset 1px 1px 30px rgba(0,0,0,0.24), inset -1px -1px 30px rgba(0,0,0,0.24);
     padding: 0.6em  0em 1.4em 1.3em;
 }
@@ -56,14 +56,14 @@ nav ul li:nth-child(3) a{
 }
 
 input[type=file]{
-    background-color: rgb(235, 227, 227);
+    background-color: #fff;
     margin-left: 0em;
 }
 
 input[type=text]{
     border:0px;
     border-bottom:1px solid black;
-    width: 50% !important;
+    width: 60% !important;
     font-family: monospace;
     font-size: 15px;
 
