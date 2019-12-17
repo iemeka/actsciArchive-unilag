@@ -69,5 +69,5 @@ six==1.11.0
 SocksiPy-branch==1.1
 SQLAlchemy==1.2.12
 uritemplate==3.0.0
-urllib3==1.24.1
+urllib3==1.24.2
 Werkzeug==0.14.1
