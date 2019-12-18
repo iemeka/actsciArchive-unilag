@@ -1,5 +1,4 @@
 .container{
-    /* border:1px solid #dedcf1; */
     max-width: 800px;
     min-height: 100vh;
     margin: auto;
@@ -24,7 +23,6 @@ header a:nth-child(2){
 }
 
 header a:nth-child(1) h1{
-    /* border: 1px solid black; */
     text-indent: -99999px;
     background:
     url(../img/Unilag-logo.png) left no-repeat,
@@ -35,7 +33,6 @@ header a:nth-child(1) h1{
 }
 
 header a:nth-child(2) h2{
-    /* border: 1px solid black; */
     text-indent: -99999px;
     background: url(../img/logooo.png) center no-repeat;
     background-size: 100%;
@@ -75,7 +72,6 @@ hgroup h4{
 
 
 form{
-    /* border: 1px solid black !important; */
     margin-top: 30px !important;    
 }
 

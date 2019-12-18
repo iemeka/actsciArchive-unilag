@@ -84,13 +84,11 @@ form + nav{
     border-bottom:1px solid black;
     box-shadow: 0px 4px 3px -3px rgb(119, 111, 111);
     display: block;
-    /* overflow: hidden; */
     padding-bottom: 3px;
     
 }
 
 form + nav ul {
-    /* border:1px solid black;   */
     overflow: hidden;      
 }
 
@@ -178,11 +176,9 @@ input[type=search]::placeholder{
 
 
 .course-list{
-    /* border:3px solid rgb(15, 67, 238); */
     height: auto !important;
     padding-top:180px;
     padding-bottom:120px
-    /* margin-left: -11px !important; */
 }
 @font-face{
     font-family: 'arvo';
@@ -197,7 +193,6 @@ input[type=search]::placeholder{
 }   
 
 section > article {
-    /* border:1px solid black; */
     width: 100%;
     display: block;
     margin-bottom: 5px;
@@ -209,7 +204,6 @@ section > article > header {
 }
 
 section > article > header > a {
-    /* border:1px solid black; */
     display: block;
     text-align: left;
     font-size: 13px;
@@ -219,7 +213,6 @@ section > article > header > a {
 }
 
 section > article > ul{
-    /* border:1px solid black; */
     position: relative;
     height: auto;
     margin-top: -3px;
@@ -227,7 +220,6 @@ section > article > ul{
 }
 
 section > article > ul > li{
-    /* border:1px solid black; */
     font-family: ostrich;
     color:black;
     display: inline-block;

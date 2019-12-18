@@ -44,7 +44,6 @@ nav ul li a:hover{
 }
 
 .upload-section{
-    /* border:1px solid black; */
     margin-top:2em;
     box-shadow: inset 1px 1px 30px rgba(0,0,0,0.24), inset -1px -1px 30px rgba(0,0,0,0.24);
     padding: 0.6em  0em 1.4em 1.3em;
