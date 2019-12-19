@@ -52,7 +52,7 @@ def recent():
     counter=0
     newlistRecentDetails=[]
     for course in revlistRecentDetails:
-        if counter != 10:
+        if counter != 20:
             newlistRecentDetails.append(course)
             counter += 1
         else:
