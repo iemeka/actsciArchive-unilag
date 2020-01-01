@@ -40,7 +40,7 @@
                 {% for detail in newlistRecentDetails %}
                 <article>
                     <header>
-                        <a  href="{{url_for('download', file_id = detail.download_id)}}">{{detail.coursetitleq}}</a>
+                        <a  href="{{url_for('download', file_id = detail.download_id)}}">{{detail.coursetitle}}</a>
                     </header>
                     <ul>
                         <li>{{detail.coursecode}}</li>
