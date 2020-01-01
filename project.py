@@ -150,7 +150,7 @@ def storeDetails():
                 file_num = str(getFile.id)
                 newName = getFile.coursetitle+" uid: "+file_num
                 getFile.filename = newName+fileExt
-                getFile.coursetitle = newName
+                # getFile.coursetitle = newName
                 session.add(getFile)
                 session.commit()
 

@@ -529,11 +529,11 @@
      borderopacity="1"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.62"
-     inkscape:cx="336.72064"
-     inkscape:cy="576.95178"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="167.11533"
+     inkscape:cy="498.38324"
      inkscape:document-units="mm"
-     inkscape:current-layer="g4666-8"
+     inkscape:current-layer="layer1"
      showgrid="false"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -542,11 +542,11 @@
      showborder="true"
      inkscape:pagecheckerboard="false"
      viewbox-width="210"
-     inkscape:window-width="934"
-     inkscape:window-height="1028"
-     inkscape:window-x="986"
+     inkscape:window-width="1867"
+     inkscape:window-height="1056"
+     inkscape:window-x="53"
      inkscape:window-y="24"
-     inkscape:window-maximized="0"
+     inkscape:window-maximized="1"
      showguides="false" />
   <metadata
      id="metadata5">
@@ -565,12 +565,12 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:#291ce3;stroke-width:0.7663337;stroke-miterlimit:4;stroke-dasharray:0.07663338, 0.07663338000000000;stroke-dashoffset:2.87244058;stroke-opacity:1"
+       style="fill:#ffffff;fill-opacity:1;stroke:#291ce3;stroke-width:0.7663337;stroke-miterlimit:4;stroke-dasharray:0.07663338, 0.07663338;stroke-dashoffset:2.87244058;stroke-opacity:1"
        id="rect10"
        width="1967.2988"
        height="2850.6655"
-       x="76.81768"
-       y="-1259.8436" />
+       x="65.592361"
+       y="-1304.7449" />
     <g
        transform="matrix(1.6666666,0,0,1.6666666,377.68139,-1224.045)"
        id="layer1-3"
@@ -610,7 +610,7 @@
          transform="matrix(4.4680526,0,0,3.5919742,-1465.3144,-579.09545)" />
       <g
          id="g5137"
-         transform="translate(-4.0663073,644.52811)">
+         transform="translate(-4.0663073,371.53801)">
         <g
            id="g2664"
            transform="translate(0,28.735793)">
@@ -652,13 +652,13 @@
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:128.19636536px;line-height:1.25;font-family:'TeX Gyre Bonum';-inkscape-font-specification:'TeX Gyre Bonum';letter-spacing:0px;word-spacing:0px;fill:#da3630;fill-opacity:1;stroke:none;stroke-width:4.00613642"
          x="-682.15015"
-         y="1299.5798"
+         y="931.01367"
          id="text4867"
          transform="scale(1.1153021,0.89661805)"><tspan
            sodipodi:role="line"
            id="tspan4865"
            x="-682.15015"
-           y="1299.5798"
+           y="931.01367"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:85.46424866px;font-family:Arial;-inkscape-font-specification:Arial;fill:#da3630;fill-opacity:1;stroke-width:4.00613642"><tspan
    style="fill:#3c6fae;fill-opacity:1"
    id="tspan3166">RECENT UPLOADS</tspan> <tspan
@@ -700,12 +700,46 @@
                    y="11.050493"
                    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.96061611px;line-height:0.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:start;letter-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:0.16716664"
                    id="tspan4653-5">ACTUARIAL SCIENCE</tspan></text>
-            </g>
+              <text
+                 xml:space="preserve"
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.72046185px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.15501924"
+                 x="-3.6434147"
+                 y="60.969315"
+                 id="text935"
+                 transform="scale(0.92916218,1.0762384)"><tspan
+                   sodipodi:role="line"
+                   id="tspan933"
+                   x="-3.6434147"
+                   y="64.261055"
+                   style="stroke-width:0.15501924" /></text>
+              <text
+                 xml:space="preserve"
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.72046185px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.15501924"
+                 x="-2.893322"
+                 y="64.469742"
+                 id="text939"
+                 transform="scale(0.92916218,1.0762384)"><tspan
+                   sodipodi:role="line"
+                   x="-2.893322"
+                   y="67.761482"
+                   style="stroke-width:0.15501924"
+                   id="tspan975" /></text>
+              <flowRoot
+                 xml:space="preserve"
+                 id="flowRoot977"
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"><flowRegion
+                   id="flowRegion979"><rect
+                     id="rect981"
+                     width="343.5484"
+                     height="30.645161"
+                     x="222.58064"
+                     y="920.9068" /></flowRegion><flowPara
+                   id="flowPara983"></flowPara></flowRoot>            </g>
           </g>
         </g>
       </g>
       <path
-         style="fill:none;stroke:#000000;stroke-width:16.12548873;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:32.25097747,16.12548873,8.06274435,16.12548873;stroke-dashoffset:0"
+         style="fill:none;stroke:#000000;stroke-width:16.12548828;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:32.25097747, 16.12548873, 8.06274435, 16.12548873;stroke-dashoffset:0;stroke-opacity:1"
          d="m -816.72612,360.39239 c 2161.96092,-5.7935 2176.37402,-5.7935 2176.37402,-5.7935"
          id="path127"
          inkscape:connector-curvature="0" />
@@ -718,16 +752,253 @@
        preserveAspectRatio="none"
        height="128.62161"
        width="813.55103" />
-    <text
+    <flowRoot
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:84.66666412px;line-height:1.25;font-family:'TeX Gyre Bonum';-inkscape-font-specification:'TeX Gyre Bonum';letter-spacing:0px;word-spacing:0px;fill:#013b60;fill-opacity:1;stroke:none;stroke-width:2.64583325"
-       x="325.38428"
-       y="-208.61378"
-       id="text1165"><tspan
-         sodipodi:role="line"
-         id="tspan1163"
-         x="325.38428"
-         y="-208.61378"
-         style="font-size:42.33333206px;fill:#013b60;fill-opacity:1;stroke-width:2.64583325">No file found. Pls enter a valid course code</tspan></text>
+       id="flowRoot985"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(2.6458333,0,0,2.6458333,0,-1336.4999)"><flowRegion
+         id="flowRegion987"><rect
+           id="rect989"
+           width="138.70967"
+           height="120.96774"
+           x="124.19355"
+           y="517.68097" /></flowRegion><flowPara
+         id="flowPara991"></flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot993"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(2.6458333,0,0,2.6458333,0,-1336.4999)"><flowRegion
+         id="flowRegion995"><rect
+           id="rect997"
+           width="851.61292"
+           height="529.03229"
+           x="116.12904"
+           y="503.16486" /></flowRegion><flowPara
+         id="flowPara999"></flowPara></flowRoot>    <g
+       id="g1390"
+       transform="translate(0,-52.916669)">
+      <text
+         id="text1155"
+         y="-192.97838"
+         x="209.10619"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:63.5px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.64583325"
+         xml:space="preserve"><tspan
+           style="font-weight:bold;font-size:49.38888931px;stroke-width:2.64583325"
+           y="-192.97838"
+           x="209.10619"
+           id="tspan1153"
+           sodipodi:role="line">           ACS'19 COURSE CODE AND COURSE TITLE</tspan><tspan
+           id="tspan1190"
+           style="font-size:49.38888931px;fill:#0e0e0e;fill-opacity:1;stroke-width:2.64583325"
+           y="-113.60338"
+           x="209.10619"
+           sodipodi:role="line">acs211  mathematics for actuarial acience</tspan><tspan
+           id="tspan1157"
+           style="font-size:49.38888931px;stroke-width:2.64583325"
+           y="-34.228378"
+           x="209.10619"
+           sodipodi:role="line">acs221  probability and statistics for actuarial science</tspan><tspan
+           id="tspan1159"
+           style="font-size:49.38888931px;stroke-width:2.64583325"
+           y="45.146622"
+           x="209.10619"
+           sodipodi:role="line">acs310  Theory of interest I</tspan><tspan
+           id="tspan1161"
+           style="font-size:49.38888931px;stroke-width:2.64583325"
+           y="124.52162"
+           x="209.10619"
+           sodipodi:role="line">acs311  advanced probability and statistics</tspan><tspan
+           id="tspan1164"
+           style="font-size:49.38888931px;stroke-width:2.64583325"
+           y="203.89662"
+           x="209.10619"
+           sodipodi:role="line">acs312  advanced mathematics</tspan><tspan
+           id="tspan1166"
+           style="font-size:49.38888931px;stroke-width:2.64583325"
+           y="283.27161"
+           x="209.10619"
+           sodipodi:role="line">acs313  life contingencies 1</tspan><tspan
+           id="tspan1168"
+           style="font-size:49.38888931px;stroke-width:2.64583325"
+           y="362.64661"
+           x="209.10619"
+           sodipodi:role="line">acs320  Theory of interest II</tspan><tspan
+           id="tspan1170"
+           style="font-size:49.38888931px;stroke-width:2.64583325"
+           y="442.02161"
+           x="209.10619"
+           sodipodi:role="line">acs321  life and other contingencies II</tspan><tspan
+           id="tspan1172"
+           style="font-size:49.38888931px;stroke-width:2.64583325"
+           y="521.39661"
+           x="209.10619"
+           sodipodi:role="line">acs322  operation research for actuarial science</tspan><tspan
+           id="tspan1174"
+           style="font-size:49.38888931px;stroke-width:2.64583325"
+           y="600.77161"
+           x="209.10619"
+           sodipodi:role="line">acs410  actuarial statistics and mortality</tspan><tspan
+           id="tspan1176"
+           style="font-size:49.38888931px;stroke-width:2.64583325"
+           y="680.14661"
+           x="209.10619"
+           sodipodi:role="line">acs411  research project</tspan><tspan
+           id="tspan1178"
+           style="font-size:49.38888931px;stroke-width:2.64583325"
+           y="759.52161"
+           x="209.10619"
+           sodipodi:role="line">acs412  Advanced life contingencies</tspan><tspan
+           id="tspan1180"
+           style="font-size:49.38888931px;stroke-width:2.64583325"
+           y="838.89661"
+           x="209.10619"
+           sodipodi:role="line">acs414  life and health insurance</tspan><tspan
+           id="tspan1182"
+           style="font-size:49.38888931px;stroke-width:2.64583325"
+           y="918.27161"
+           x="209.10619"
+           sodipodi:role="line">acs420  pensions and social insurance</tspan><tspan
+           id="tspan1184"
+           style="font-size:49.38888931px;stroke-width:2.64583325"
+           y="997.64661"
+           x="209.10619"
+           sodipodi:role="line">acs422  survival models</tspan><tspan
+           id="tspan1186"
+           style="font-size:49.38888931px;stroke-width:2.64583325"
+           y="1077.0216"
+           x="209.10619"
+           sodipodi:role="line">acs425  risk credibility Theory</tspan><tspan
+           id="tspan1188"
+           style="font-size:49.38888931px;stroke-width:2.64583325"
+           y="1156.3966"
+           x="209.10619"
+           sodipodi:role="line">acs423  numeric analysis</tspan><tspan
+           id="tspan1336"
+           style="font-size:49.38888931px;stroke-width:2.64583325"
+           y="1235.7716"
+           x="209.10619"
+           sodipodi:role="line">cts     ct1 through ct8, other actuarial exam resources</tspan><tspan
+           id="tspan1338"
+           style="font-size:49.38888931px;stroke-width:2.64583325"
+           y="1315.1466"
+           x="209.10619"
+           sodipodi:role="line">txtb    other relevant textbooks</tspan><tspan
+           id="tspan1340"
+           style="font-size:49.38888931px;stroke-width:2.64583325"
+           y="1394.5216"
+           x="209.10619"
+           sodipodi:role="line">gen     other general relevant study materials</tspan></text>
+      <path
+         inkscape:connector-curvature="0"
+         id="path1192"
+         d="m 415.25564,-173.92816 c -3.57975,1578.83266 -3.57975,1578.83266 -3.57975,1578.83266 l 3.57975,-4.3256"
+         style="fill:none;stroke:#e36561;stroke-width:2.78247619px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path1194"
+         d="m 208.25535,-92.365345 c 1713.73235,0 1713.73235,0 1713.73235,0"
+         style="fill:none;stroke:#4c7bb5;stroke-width:2.64583325px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path1194-3"
+         d="m 206.90689,-10.266652 c 1713.73341,0 1713.73341,0 1713.73341,0"
+         style="fill:none;stroke:#3c6fae;stroke-width:2.64583325px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path1194-6"
+         d="m 204.578,67.577281 c 1713.7316,0 1713.7316,0 1713.7316,0"
+         style="fill:none;stroke:#4c7bb5;stroke-width:2.64583325px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path1194-7"
+         d="m 202.69772,149.29997 c 1713.73218,0 1713.73218,0 1713.73218,0"
+         style="fill:none;stroke:#4c7bb5;stroke-width:2.64583325px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path1194-7-3"
+         d="m 201.78986,230.33502 c 1713.73194,0 1713.73194,0 1713.73194,0"
+         style="fill:none;stroke:#4c7bb5;stroke-width:2.64583325px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path1194-7-5"
+         d="m 201.78986,309.71006 c 1713.73194,0 1713.73194,0 1713.73194,0"
+         style="fill:none;stroke:#4c7bb5;stroke-width:2.64583325px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path1194-7-6"
+         d="m 200.5059,387.4895 c 1713.7321,0 1713.7321,0 1713.7321,0"
+         style="fill:none;stroke:#4c7bb5;stroke-width:2.64583325px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path1194-7-2"
+         d="m 200.5059,469.80851 c 1713.7321,0 1713.7321,0 1713.7321,0"
+         style="fill:none;stroke:#4c7bb5;stroke-width:2.64583325px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path1194-7-9"
+         d="m 200.5059,549.02773 c 1713.7321,0 1713.7321,0 1713.7321,0"
+         style="fill:none;stroke:#4c7bb5;stroke-width:2.64583325px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path1194-7-1"
+         d="m 206.70548,624.50518 c 1713.73222,0 1713.73222,0 1713.73222,0"
+         style="fill:none;stroke:#4c7bb5;stroke-width:2.64583325px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path1194-7-27"
+         d="m 200.77183,703.99033 c 1713.73227,0 1713.73227,0 1713.73227,0"
+         style="fill:none;stroke:#4c7bb5;stroke-width:2.64583325px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path1194-7-0"
+         d="m 206.0635,786.30935 c 1713.7323,0 1713.7323,0 1713.7323,0"
+         style="fill:none;stroke:#4c7bb5;stroke-width:2.64583325px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path1194-7-93"
+         d="m 200.12985,861.14481 c 1713.73225,0 1713.73225,0 1713.73225,0"
+         style="fill:none;stroke:#4c7bb5;stroke-width:2.64583325px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path1194-7-60"
+         d="m 202.58767,941.27195 c 1713.73243,0 1713.73243,0 1713.73243,0"
+         style="fill:none;stroke:#4c7bb5;stroke-width:2.64583325px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path1194-7-62"
+         d="m 201.30371,1022.949 c 1713.73249,0 1713.73249,0 1713.73249,0"
+         style="fill:none;stroke:#4c7bb5;stroke-width:2.64583325px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path1194-7-61"
+         d="m 204.66939,1100.6183 c 1713.73241,0 1713.73241,0 1713.73241,0"
+         style="fill:none;stroke:#4c7bb5;stroke-width:2.64583325px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path1194-7-8"
+         d="m 202.88035,1182.1393 c 1713.73285,0 1713.73285,0 1713.73285,0"
+         style="fill:none;stroke:#4c7bb5;stroke-width:2.64583325px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path1194-7-7"
+         d="m 204.49476,1254.517 c 1713.73314,0 1713.73314,0 1713.73314,0"
+         style="fill:none;stroke:#4c7bb5;stroke-width:2.64583325px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path1194-7-92"
+         d="m 208.34665,1337.4779 c 1713.73265,0 1713.73265,0 1713.73265,0"
+         style="fill:none;stroke:#4c7bb5;stroke-width:2.64583325px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <text
+         id="text1344"
+         y="1322.933"
+         x="594.94196"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:63.5px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.64583325"
+         xml:space="preserve"><tspan
+           style="stroke-width:2.64583325"
+           y="1322.933"
+           x="594.94196"
+           id="tspan1342"
+           sodipodi:role="line"> </tspan></text>
+    </g>
   </g>
 </svg>
