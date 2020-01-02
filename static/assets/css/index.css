@@ -184,8 +184,20 @@ footer{
     font-weight: bold
 }
 
+
+form + nav + div h3{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 2px;
+}
+
+
 nav + div h3 + table{
     border:1px solid black !important;
+    margin:auto;
 }
 
 nav + div h3 + table tr {
@@ -223,16 +235,6 @@ nav + div h3 + table tr td:nth-child(1){
         /* border: 1px solid black; */
         overflow: hidden;
     }
-
-    form + nav + div h3{
-        text-align: center;
-        text-transform: uppercase;
-        font-family: monospace;
-        font-weight: bold;
-        font-size: 12px;
-        margin-bottom: 2px;
-    }
-
 
 
 }
