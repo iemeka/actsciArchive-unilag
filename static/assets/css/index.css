@@ -184,11 +184,20 @@ footer{
     font-weight: bold
 }
 
-/* @media only screen and (max-width:320){} */
+nav + div h3 + table{
+    border:1px solid black !important;
+}
 
+nav + div h3 + table tr {
+    border-bottom: 1px solid #4c7bb5ff ;
+}
+
+nav + div h3 + table tr td:nth-child(1){
+    border-right: 1px solid #e36561ff
+}
 
 /* Mobile styles */
-@media only screen and (min-width:300px){
+@media only screen and (max-width:500px){
     hgroup h3{
         font-size: 12px;
     }
@@ -223,48 +232,6 @@ footer{
         font-size: 12px;
         margin-bottom: 2px;
     }
-
-    form + nav + div .all-code{
-        float: left;
-        /* border-right: 1px solid #e36561ff; */
-        
-    }
-
-    form + nav + div .all-code li span{
-        padding-right: 4px;
-    }
-
-    form + nav + div .all-title li span{
-        padding-left: 4px;
-    }
-
-    form + nav + div .all-title{
-        float: left;
-    }
-
-    .all-code li, .all-title li{
-        font-family: monospace;
-        /* border-bottom: 1px solid #4c85b5ff; */
-        padding-top:3px;
-        font-size: 10px;
-    } 
-
-/* 
-
-   
-
-    
-
-    form + nav + div h3 + ul li .code{
-        border: 1px solid black;
-    }
-
-    form + nav + div h3 + ul li .title{
-        border: 1px solid black;
-    } */
-
-
-    
 
 
 
