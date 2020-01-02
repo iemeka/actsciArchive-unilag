@@ -188,7 +188,7 @@ footer{
 
 
 /* Mobile styles */
-@media only screen and (max-width:500px){
+@media only screen and (min-width:300px){
     hgroup h3{
         font-size: 12px;
     }
