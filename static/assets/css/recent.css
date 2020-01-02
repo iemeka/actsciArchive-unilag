@@ -132,7 +132,7 @@ form + nav ul li:nth-child(3) a{
 
 }
 
-form + nav ul li:nth-child(3) a:hover{
+form + nav ul li:nth-child(2) a:hover{
     background-color:rgb(126, 10, 47);
 }
 
