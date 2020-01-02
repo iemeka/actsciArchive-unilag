@@ -184,7 +184,7 @@ footer{
     font-weight: bold
 }
 
-@media only screen and (max-width:320){}
+/* @media only screen and (max-width:320){} */
 
 
 /* Mobile styles */
@@ -246,7 +246,7 @@ footer{
         font-family: monospace;
         /* border-bottom: 1px solid #4c85b5ff; */
         padding-top:3px;
-        font-size: 12px;
+        font-size: 10px;
     } 
 
 /* 
