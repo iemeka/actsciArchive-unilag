@@ -111,19 +111,34 @@ form + nav ul li:nth-child(2){
 form + nav ul li:nth-child(2) a{
     font-size: 12px;
     font-weight: bold;
-    padding: 7px 20px;
+    padding: 7px 18px;
     color: #fff !important;
     background-color: #ac0136ff;
     border-radius:3px
 }
 
-form + nav ul li:nth-child(2) a:hover{
+form + nav ul li:nth-child(3){
+    float: right;
+}
+
+form + nav ul li:nth-child(3) a{
+    font-size: 12px;
+    font-weight: bold;
+    padding: 7px 18px;
+    color: #fff !important;
+    background-color: #3c6faeff;
+    border-radius:3px;
+    margin-right: 3px;
+
+}
+
+form + nav ul li:nth-child(3) a:hover{
     background-color:rgb(126, 10, 47);
 }
 
 form + nav ul li:nth-child(1){
     font-size: 15px;
-    color: #3c6faeff !important;
+    color: #c4ac6dff !important;
     text-transform: uppercase !important;
     font-family: sans-serif;
     font-weight:normal;
@@ -283,6 +298,17 @@ footer{
         right: -2px;
     }
 
+}
+
+@media only screen and (min-width:300px ) and (max-width:325px ){
+    form + nav ul li:nth-child(1){
+        font-size: 13px;
+    }
+
+    form + nav ul li:nth-child(2) a, form + nav ul li:nth-child(3) a{
+        font-size: 10px;
+        padding: 7px 15px;
+    }
 }
 
 @media only screen and (min-width:501px){
