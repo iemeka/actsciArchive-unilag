@@ -108,6 +108,10 @@ form + nav ul li:nth-child(2){
     float: right;
 }
 
+form + nav ul li:nth-child(3){
+    float: right;
+}
+
 form + nav ul li:nth-child(2) a{
     font-size: 12px;
     font-weight: bold;
@@ -117,9 +121,6 @@ form + nav ul li:nth-child(2) a{
     border-radius:3px
 }
 
-form + nav ul li:nth-child(3){
-    float: right;
-}
 
 form + nav ul li:nth-child(3) a{
     font-size: 12px;

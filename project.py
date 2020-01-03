@@ -11,9 +11,10 @@ from flask import Flask, render_template, url_for, request, redirect,flash, send
 from werkzeug.utils import secure_filename
 from db_setup import Base, courseDetails
 import requests
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, asc, desc
 from sqlalchemy.orm import sessionmaker
 from flask_sqlalchemy import SQLAlchemy
+
 
 
 DATABASE_URL = os.environ['DATABASE_URL']
@@ -47,7 +48,7 @@ def index():
 
 @app.route('/recent')
 def recent():
-    listRecentDetails = session.query(courseDetails).all()
+    listRecentDetails = session.query(courseDetails).order_by(asc(courseDetails.id)).all()
     revlistRecentDetails = reversed(listRecentDetails)
     counter=0
     newlistRecentDetails=[]
