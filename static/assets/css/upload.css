@@ -138,6 +138,14 @@ input[type=submit]:hover{
     background-color:rgb(126, 10, 47);
 }
 
+#permission{
+    font-family: helvetica;
+    font-size: 12px;
+    color:red;
+    margin-top:10px;
+    display: none:
+}
+
 @media only screen and (max-width:500px){
     input[name=course-title]{
         margin-left: 0em;
@@ -168,6 +176,10 @@ input[type=submit]:hover{
 @media only screen and (max-width:1900px){
     input[type=submit]{
         pointer-events: none;
-  
+      }
+
+      #permission{
+          display: block;
+          display: visible;
       }
 }
