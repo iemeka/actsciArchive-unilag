@@ -164,3 +164,10 @@ input[type=submit]:hover{
     }
     
 }
+
+@media only screen and (max-width:1900px){
+    input[type=submit]{
+        pointer-events: none;
+  
+      }
+}
