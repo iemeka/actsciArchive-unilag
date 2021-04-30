@@ -63,7 +63,7 @@ PyYAML==3.13
 requests==2.20.1
 requests-oauthlib==1.0.0
 retry-decorator==1.1.0
-rsa==3.4.2
+rsa==4.7.1
 s3transfer==0.1.13
 six==1.11.0
 SocksiPy-branch==1.1
