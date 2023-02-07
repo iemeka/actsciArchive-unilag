@@ -58,7 +58,7 @@ ipython-memory-usage==1.2
 ipywidgets==7.2.1
 ItsDangerous==1.0.0
 jdcal==1.4
-Jinja2==2.10
+Jinja2==2.11.3
 jmespath==0.9.3
 jsonpatch==1.23
 jsonpointer==2.0
