@@ -69,7 +69,7 @@ jupyter-console==5.2.0
 jupyter-core==4.4.0
 kiwisolver==1.0.1
 lpthw.web==1.1
-lxml==4.5.0
+lxml==4.9.1
 mailer==0.8.1
 Mako==1.0.7
 MarkupSafe==1.0
