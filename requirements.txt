@@ -144,7 +144,7 @@ urllib3==1.24
 wcwidth==0.1.7
 web.py==0.39
 webencodings==0.5.1
-Werkzeug==0.14.1
+Werkzeug==0.15.5
 widgetsnbextension==3.2.1
 xarray==0.10.7
 xlrd==1.2.0
