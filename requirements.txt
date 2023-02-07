@@ -47,7 +47,7 @@ googleapis-common-protos==1.6.0
 gunicorn==19.9.0
 gyp==0.1
 html5lib==1.0.1
-httplib2==0.14.0
+httplib2==0.19.0
 idna==2.10
 inflection==0.3.1
 internetarchive==1.8.1
