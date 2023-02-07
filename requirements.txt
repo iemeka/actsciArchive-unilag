@@ -71,7 +71,7 @@ kiwisolver==1.0.1
 lpthw.web==1.1
 lxml==4.5.0
 mailer==0.8.1
-Mako==1.0.7
+Mako==1.2.2
 MarkupSafe==1.0
 matplotlib==2.2.2
 memory-profiler==0.57.0
