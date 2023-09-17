@@ -1,7 +1,7 @@
 # ---upload and download  imports ---
 from __future__ import print_function
 import os
-from apiclient import discovery
+from googleapiclient import discovery
 from httplib2 import Http
 from oauth2client import file, client, tools
 import io
@@ -30,6 +30,7 @@ session = DBSession()
 
 ALLOWED_EXTENSIONS = set(['pdf','doc','docx'])
 linkToCdir = os.path.dirname(__file__)
+absP = os.path.dirname(os.path.abspath(__file__))
 pathToFiles = os.path.dirname(os.path.join(linkToCdir, 'static/files/'))
 pathToCred = os.path.join(linkToCdir,'project-actsci-60d303260f9b.json')
 UPLOAD_FOLDER = pathToFiles
@@ -94,7 +95,7 @@ def upload_file(newfile):
     creds = store.get()
     filename = os.path.basename(newfile)
     if not creds or creds.invalid:
-        flow = client.flow_from_clientsecrets('client_secret.json', SCOPES)
+        flow = client.flow_from_clientsecrets(os.path.join(absP,'client_secret.json'), SCOPES)
         creds = tools.run_flow(flow, store)
         
     DRIVE = discovery.build('drive', 'v2', http=creds.authorize(Http()))
@@ -170,7 +171,7 @@ def download(file_id):
     store = file.Storage('storage.json')
     creds = store.get()
     if not creds or creds.invalid:
-        flow = client.flow_from_clientsecrets('client_secret.json', SCOPES)
+        flow = client.flow_from_clientsecrets(os.path.join(absP,'client_secret.json'), SCOPES)
         creds = tools.run_flow(flow, store)
         
     DRIVE = discovery.build('drive', 'v2', http=creds.authorize(Http()))
@@ -178,12 +179,12 @@ def download(file_id):
     # flash('Downloading...')
     getFile = session.query(courseDetails).filter_by(download_id=file_id).one()
     file_name = getFile.filename
-    print(file_name)
     fh = io.FileIO(os.path.join(bucket, file_name), mode='w')
     downloader = MediaIoBaseDownload(fh, request)
     done = False
     while done is False:
         status, done = downloader.next_chunk()
+
     return send_from_directory(bucket,file_name, as_attachment=True)
     
 
